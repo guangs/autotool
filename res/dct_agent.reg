@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM]
+"TraceEnabled"="True"
+"DebugEnabled"="True"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log]
+"VChanLogLevel"=dword:00000001
