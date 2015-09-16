@@ -1,5 +1,6 @@
 import _winreg as wreg
 import argparse
+import threading
 
 class TYPE:
     'Value Type Constants'
@@ -40,6 +41,8 @@ class RIGHT:
 
 class Registry(object):
 
+    lock = threading.Lock()
+
     def __init__(self):
         object.__init__(self)
 
@@ -58,6 +61,7 @@ class Registry(object):
         index 1: An integer giving the registry type for this value, see the mapping ship above
         '''
         try:
+            self.lock.acquire()
             hkey, subkey = self.__split_keypath(keypath)
             if hkey in filter(str.isupper, dir(HKEY)):
                 key = wreg.OpenKey(HKEY.__dict__.get(hkey),subkey)
@@ -67,9 +71,12 @@ class Registry(object):
                 return None
         except WindowsError:
             return None
+        finally:
+            self.lock.release()
 
     def set_value(self,keypath,name,value,type="REG_SZ"):
         try:
+            self.lock.acquire()
             hkey, subkey = self.__split_keypath(keypath)
             if hkey in filter(str.isupper, dir(HKEY)):
                 try:
@@ -90,9 +97,12 @@ class Registry(object):
                 return False
         except WindowsError:
             return False
+        finally:
+            self.lock.release()
 
     def del_value(self,keypath,name=None):
         try:
+            self.lock.acquire()
             hkey, subkey = self.__split_keypath(keypath)
             if hkey in filter(str.isupper, dir(HKEY)):
                 key = wreg.OpenKey(HKEY.__dict__.get(hkey), subkey, 0,RIGHT.ALL_ACCESS)
@@ -103,6 +113,8 @@ class Registry(object):
             return True
         except WindowsError:
             return True
+        finally:
+            self.lock.release()
 
 def print_usage():
     print '''registry model usage:

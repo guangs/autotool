@@ -110,7 +110,7 @@ def start_capture_logs():
             t.setDaemon(True)
             t.start()
             threads.append(t)
-            time.sleep(0.2)
+            #time.sleep(0.2)
             # webclient.startCaptureLog(log_dir,filefilter,dst_dir,5,300,CLIENT_HOST+':'+str(PORT),200)
     for AGENT_HOST in AGENT_HOSTS:
         for log_dir in agent_log_dirs:
@@ -118,8 +118,9 @@ def start_capture_logs():
             t.setDaemon(True)
             t.start()
             threads.append(t)
-            time.sleep(0.2)
+            #time.sleep(0.2)
             # webclient.startCaptureLog(log_dir,filefilter,dst_dir,5,300,AGENT_HOST+':'+str(PORT),200)
+    time.sleep(0.2)
     for t in threads:
         t.join()
         if t.exitcode != 0:

@@ -5,6 +5,8 @@ import time
 import getpass
 import glob
 import zipfile
+import threading
+
 
 class LogCaptorException(Exception):
     def __init__(self,value):
@@ -18,6 +20,7 @@ start_time = None
 start_timeout = 60*10
 common_data = {}
 class LogCaptor:
+    lock = threading.Lock()
     def __init__(self,src_dir,file_filter=r'.*'):
         self.src_dir = self._replace_username(src_dir)
         if not os.path.exists(self.src_dir):
@@ -30,10 +33,11 @@ class LogCaptor:
         global sub_dirname,start_time,common_data
         sub_dirname= time.strftime('%Y%m%d-%H%M')
         start_time = time.time()
-        common_data[self.db_key] = []
         logfiles = self.logfiles
         lastpositions = [self._last_position(os.path.join(self.src_dir,f)) for f in logfiles]
-        common_data[self.db_key] = zip(logfiles,lastpositions)
+        with self.lock:
+            common_data[self.db_key] = []
+            common_data[self.db_key] = zip(logfiles,lastpositions)
 
     def stop(self,dst_dir):
         global sub_dirname,start_time,common_data
