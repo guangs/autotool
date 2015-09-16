@@ -1,4 +1,3 @@
-SET AUTOTOOL_HOME=%CD:\bin=%
+SET AUTOTOOL_HOME=C:\autotool
 SET PATH=%PATH%;%AUTOTOOL_HOME%
-cd %AUTOTOOL_HOME%
 python %AUTOTOOL_HOME%\webservice.py
