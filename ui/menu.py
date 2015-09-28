@@ -11,6 +11,7 @@
 import sys, os
 import application
 import webclient
+import platform
 
 # =======================
 #     MENUS FUNCTIONS
@@ -288,7 +289,10 @@ class Frame(object):
     @classmethod
     def exec_menu(cls,menu_class_name):
         # clear
-        os.system('cls')
+        if platform.system() == 'Windows':
+            os.system('cls')
+        else:
+            os.system('clear')
         menu = globals()[menu_class_name]
         cls.total_items = len(menu.items)
         cls.total_pages = cls.total_items/cls.max_items_in_one_page + 1
