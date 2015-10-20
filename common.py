@@ -35,7 +35,7 @@ def GetMessage(site,url,json=True):
     host = site[0]
     port = site[1]
     try:
-        conn = httplib.HTTPConnection(host,port,timeout=15)
+        conn = httplib.HTTPConnection(host,port,timeout=30)
         if json:
             conn.request("GET", url, '', commonheaders_json)
         else:
@@ -56,7 +56,7 @@ def GetMessage(site,url,json=True):
             conn=None
     try:
         if FirstPass==False:
-            conn = httplib.HTTPConnection(host,port,timeout=15)
+            conn = httplib.HTTPConnection(host,port,timeout=30)
             if json:
                 conn.request("GET", url, '', commonheaders_json)
             else:
@@ -83,7 +83,7 @@ def PostMessage(site,url,body,json=True, contentType=None, AcceptTypes=None):
     port = site[1]
     resdata = {}
     try:
-        conn = httplib.HTTPConnection(host,port,timeout=15)
+        conn = httplib.HTTPConnection(host,port,timeout=30)
 
         tempheaders=commonheaders_json
         if not json:
@@ -119,7 +119,7 @@ def PostMessage(site,url,body,json=True, contentType=None, AcceptTypes=None):
 
     try:
         if not FirstPass:
-            conn = httplib.HTTPConnection(host,port,timeout=15)
+            conn = httplib.HTTPConnection(host,port,timeout=30)
             conn.request("POST", url, body, tempheaders)
             response = conn.getresponse()
             data = response.read()
@@ -142,7 +142,7 @@ def DeleteMessage(site,url,json=True):
     host = site[0]
     port = site[1]
     try:
-        conn = httplib.HTTPConnection(host,port,timeout=15)
+        conn = httplib.HTTPConnection(host,port,timeout=30)
         tempheaders=commonheaders_json
         if not json:
             tempheaders=commonheaders
@@ -162,7 +162,7 @@ def DeleteMessage(site,url,json=True):
             conn=None
     try:
         if FirstPass==False:
-            conn = httplib.HTTPConnection(host,port,timeout=15)
+            conn = httplib.HTTPConnection(host,port,timeout=30)
             tempheaders=commonheaders_json
             if not json:
                 tempheaders=commonheaders

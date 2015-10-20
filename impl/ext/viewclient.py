@@ -14,7 +14,7 @@ INSTALL_PARAMS = [
 ]
 
 
-def download_viewclient_installer(product='viewcrt',branch='crt-15q3',buildtype='release',buildid='2999900'):
+def download_viewclient_installer(product='viewcrt',branch='crt-15q3',buildtype='release',buildid='2999900',kind='official'):
     """ Download the View Client installer from buildweb. """
     # XXX need to make sure ''external_version'' definitively identifies the
     # downloaded MSI.
@@ -26,13 +26,14 @@ def download_viewclient_installer(product='viewcrt',branch='crt-15q3',buildtype=
         tempfile.gettempdir(),
         branch,
         buildtype,
-        buildid)
+        buildid,
+        kind)
 
 
-def install(product='viewcrt',branch='crt-15q3',buildtype='release',buildid='2999900'):
+def install(product='viewcrt',branch='crt-15q3',buildtype='release',buildid='2999900',kind='official'):
     """ Install the MSI. """
     # Now download the latest view agent build
-    installer_path = download_viewclient_installer(product,branch,buildtype,buildid)
+    installer_path = download_viewclient_installer(product,branch,buildtype,buildid,kind)
 
     # run the installer
     print ">>> Starting viewclient installer"

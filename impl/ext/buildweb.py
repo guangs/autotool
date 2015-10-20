@@ -84,7 +84,7 @@ def build_info_str(bld):
 
 
 def download_deliverable_file(product, target_pattern, local_dnld_dir,
-                              branch=None, buildtype=None, buildid=None):
+                              branch=None, buildtype=None, buildid=None,kind='official'):
     """ Download the lastest version of a file. """
     kwargs = {}
     if branch:
@@ -95,7 +95,7 @@ def download_deliverable_file(product, target_pattern, local_dnld_dir,
         kwargs['id'] = buildid
         
     #builds = get_build_urls(product, 'official', buildtype=buildtype, **kwargs)
-    builds = get_build_urls(product, 'official', **kwargs)
+    builds = get_build_urls(product, kind, **kwargs)
     
     latest = get_build(builds[0])
     print ">>> Downloading latest %s build: %d" % (product, latest['id'])
