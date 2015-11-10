@@ -14601,3 +14601,3756 @@ id="v41066168"
 </body>
 </html> 
 
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"True",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"True",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"True",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"True",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnRdp&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnRdp&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnRdp&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnRdp&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnICA&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnICA&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnICA&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnICA&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CClient&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CClient&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CClient&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CClient&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPView&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPView&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPView&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPView&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnRdp&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnRdp&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnRdp&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnRdp&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnICA&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnICA&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnICA&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnICA&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CClient&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CClient&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CClient&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CClient&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPView&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPView&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPView&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPView&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnRdp&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnRdp&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnRdp&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnRdp&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnICA&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnICA&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnICA&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPClnICA&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CClient&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CClient&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CClient&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CClient&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPView&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPView&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPView&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CThinPrint%5CTPView&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnRdp&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnRdp&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnRdp&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnRdp&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnICA&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnICA&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnICA&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPClnICA&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CClient&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CClient&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CClient&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CClient&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPView&name=DebugLevel
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPView&name=DebugLevel
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+/rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPView&name=DebugFile
+
+
+this message url in DeleteMessage is: 
+ /rest/registry?key=HKEY_LOCAL_MACHINE%5CSOFTWARE%5CWow6432Node%5CThinPrint%5CTPView&name=DebugFile
+
+
+this response in DeleteMessage is 
+ {"registry":{"status":"OK"}} 
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"ziplogsresponse":{"status":"OK"}} 
+
+tell me which dir
+want zipfile name?
+server ready
+receive zip file successfully
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"ziplogsresponse":{"status":"OK"}} 
+
+tell me which dir
+want zipfile name?
+server ready
+receive zip file successfully
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+Get an exception when trying to connection to host and send GET /rest/logging
+Exception:[Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+retry it again
+Get an exception when trying to connection to host and send GET /rest/logging
+Exception:[Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+retry it again
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/logging
+Exception:[Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+retry it again
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "ziplogsresponse": {
+    "status": "Error",
+    "description": "no new logs"
+  }
+} 
+
+tell me which dir
+zipfile is not existing
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"ziplogsresponse":{"status":"OK"}} 
+
+tell me which dir
+want zipfile name?
+server ready
+receive zip file successfully
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/registry
+Exception:[Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+retry it again
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/registry
+Exception:[Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+retry it again
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"true",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"True",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"TraceEnabled",
+    "value":"True",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"True",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM",
+    "name":"DebugEnabled",
+    "value":"True",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware VDM\Log",
+    "name":"VChanLogLevel",
+    "value":"1",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnRdp",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnRdp.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnRdp",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnRdp.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnRdp",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnRdp",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnICA",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnICA.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnICA",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnICA.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnICA",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnICA",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\Client",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnt.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\Client",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnt.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\Client",
+    "name":"DebugLevel",
+    "value":"215",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\Client",
+    "name":"DebugLevel",
+    "value":"215",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPView",
+    "name":"DebugLevel",
+    "value":"31",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPView",
+    "name":"DebugLevel",
+    "value":"31",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPView",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPView.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPView",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPView.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnRdp_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnRdp_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnICA",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnICA_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnICA",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnICA_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnICA",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnICA",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\Client",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnt_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\Client",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnt_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\Client",
+    "name":"DebugLevel",
+    "value":"215",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\Client",
+    "name":"DebugLevel",
+    "value":"215",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPView",
+    "name":"DebugLevel",
+    "value":"31",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPView",
+    "name":"DebugLevel",
+    "value":"31",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPView",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPView_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPView",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPView_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnRdp",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnRdp.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnRdp",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnRdp.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnRdp",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnRdp",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnICA",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnICA.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnICA",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnICA.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnICA",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPClnICA",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\Client",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnt.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\Client",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnt.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\Client",
+    "name":"DebugLevel",
+    "value":"215",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\Client",
+    "name":"DebugLevel",
+    "value":"215",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPView",
+    "name":"DebugLevel",
+    "value":"31",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPView",
+    "name":"DebugLevel",
+    "value":"31",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPView",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPView.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPView",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPView.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnRdp_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnRdp_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnICA",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnICA_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnICA",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnICA_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnICA",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnICA",
+    "name":"DebugLevel",
+    "value":"7",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\Client",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnt_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\Client",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPClnt_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\Client",
+    "name":"DebugLevel",
+    "value":"215",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\Client",
+    "name":"DebugLevel",
+    "value":"215",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPView",
+    "name":"DebugLevel",
+    "value":"31",
+    "type":"REG_DWORD",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPView",
+    "name":"DebugLevel",
+    "value":"31",
+    "type":"REG_DWORD",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPView",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPView_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "registry":{
+    "key":r"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPView",
+    "name":"DebugFile",
+    "value":"C:\\Temp\\TPView_6432.log",
+    "type":"REG_SZ",
+  }
+}
+
+
+
+this response in PostMessage is 
+{"registry":{"status":"OK"}} 
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="NONE,NOARCHIVE" />
+  <title>&lt;class &#39;thread.error&#39;&gt; at /rest/logging</title>
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; }
+    h2 { margin-bottom:.8em; }
+    h2 span { font-size:80%; color:#666; font-weight:normal; }
+    h3 { margin:1em 0 .5em 0; }
+    h4 { margin:0 0 .5em 0; font-weight: normal; }
+    table { 
+        border:1px solid #ccc; border-collapse: collapse; background:white; }
+    tbody td, tbody th { vertical-align:top; padding:2px 3px; }
+    thead th { 
+        padding:1px 6px 1px 3px; background:#fefefe; text-align:left; 
+        font-weight:normal; font-size:11px; border:1px solid #ddd; }
+    tbody th { text-align:right; color:#666; padding-right:.5em; }
+    table.vars { margin:5px 0 2px 40px; }
+    table.vars td, table.req td { font-family:monospace; }
+    table td.code { width:100%;}
+    table td.code div { overflow:hidden; }
+    table.source th { color:#666; }
+    table.source td { 
+        font-family:monospace; white-space:pre; border-bottom:1px solid #eee; }
+    ul.traceback { list-style-type:none; }
+    ul.traceback li.frame { margin-bottom:1em; }
+    div.context { margin: 10px 0; }
+    div.context ol { 
+        padding-left:30px; margin:0 10px; list-style-position: inside; }
+    div.context ol li { 
+        font-family:monospace; white-space:pre; color:#666; cursor:pointer; }
+    div.context ol.context-line li { color:black; background-color:#ccc; }
+    div.context ol.context-line li span { float: right; }
+    div.commands { margin-left: 40px; }
+    div.commands a { color:black; text-decoration:none; }
+    #summary { background: #ffc; }
+    #summary h2 { font-weight: normal; color: #666; }
+    #explanation { background:#eee; }
+    #template, #template-not-exist { background:#f6f6f6; }
+    #template-not-exist ul { margin: 0 0 0 20px; }
+    #traceback { background:#eee; }
+    #requestinfo { background:#f6f6f6; padding-left:120px; }
+    #summary table { border:none; background:transparent; }
+    #requestinfo h2, #requestinfo h3 { position:relative; margin-left:-100px; }
+    #requestinfo h3 { margin-bottom:-1em; }
+    .error { background: #ffc; }
+    .specific { color:#cc3300; font-weight:bold; }
+  </style>
+  <script type="text/javascript">
+  //<!--
+    function getElementsByClassName(oElm, strTagName, strClassName){
+        // Written by Jonathan Snook, http://www.snook.ca/jon; 
+        // Add-ons by Robert Nyman, http://www.robertnyman.com
+        var arrElements = (strTagName == "*" && document.all)? document.all :
+        oElm.getElementsByTagName(strTagName);
+        var arrReturnElements = new Array();
+        strClassName = strClassName.replace(/\-/g, "\-");
+        var oRegExp = new RegExp("(^|\s)" + strClassName + "(\s|$)");
+        var oElement;
+        for(var i=0; i<arrElements.length; i++){
+            oElement = arrElements[i];
+            if(oRegExp.test(oElement.className)){
+                arrReturnElements.push(oElement);
+            }
+        }
+        return (arrReturnElements)
+    }
+    function hideAll(elems) {
+      for (var e = 0; e < elems.length; e++) {
+        elems[e].style.display = 'none';
+      }
+    }
+    window.onload = function() {
+      hideAll(getElementsByClassName(document, 'table', 'vars'));
+      hideAll(getElementsByClassName(document, 'ol', 'pre-context'));
+      hideAll(getElementsByClassName(document, 'ol', 'post-context'));
+    }
+    function toggle() {
+      for (var i = 0; i < arguments.length; i++) {
+        var e = document.getElementById(arguments[i]);
+        if (e) {
+          e.style.display = e.style.display == 'none' ? 'block' : 'none';
+        }
+      }
+      return false;
+    }
+    function varToggle(link, id) {
+      toggle('v' + id);
+      var s = link.getElementsByTagName('span')[0];
+      var uarr = String.fromCharCode(0x25b6);
+      var darr = String.fromCharCode(0x25bc);
+      s.innerHTML = s.innerHTML == uarr ? darr : uarr;
+      return false;
+    }
+    //-->
+  </script>
+</head>
+<body>
+
+<div id="summary">
+  <h1>&lt;class &#39;thread.error&#39;&gt; at /rest/logging</h1>
+  <h2>release unlocked lock</h2>
+  <table><tr>
+    <th>Python</th>
+    <td>C:\autotool\web\utils.py in update, line 495</td>
+  </tr><tr>
+    <th>Web</th>
+    <td>POST http://10.117.41.93:9180/rest/logging</td>
+  </tr></table>
+</div>
+<div id="traceback">
+<h2>Traceback <span>(innermost first)</span></h2>
+<ul class="traceback">
+<li class="frame">
+<code>C:\autotool\web\utils.py</code> in <code>update</code>
+<div class="context" id="c37581928">
+<ol start="488" class="pre-context" id="pre37581928">
+<li onclick="toggle('pre37581928', 'post37581928')">        if not self.running.get(key):</li>
+<li onclick="toggle('pre37581928', 'post37581928')">            self.running[key] = threading.Lock()</li>
+<li onclick="toggle('pre37581928', 'post37581928')">        def update(block=False):</li>
+<li onclick="toggle('pre37581928', 'post37581928')">            if self.running[key].acquire(block):</li>
+<li onclick="toggle('pre37581928', 'post37581928')">                try:</li>
+<li onclick="toggle('pre37581928', 'post37581928')">                    self.cache[key] = (self.func(*args, **keywords), time.time())</li>
+<li onclick="toggle('pre37581928', 'post37581928')">                finally:</li>
+</ol>
+<ol start="495" class="context-line"><li onclick="toggle('pre37581928', 'post37581928')">                    self.running[key].release() <span>...</span></li></ol>
+<ol start='496' class="post-context" id="post37581928">
+<li onclick="toggle('pre37581928', 'post37581928')">        </li>
+<li onclick="toggle('pre37581928', 'post37581928')">        if key not in self.cache: </li>
+<li onclick="toggle('pre37581928', 'post37581928')">            update(block=True)</li>
+<li onclick="toggle('pre37581928', 'post37581928')">        elif self.expires and (time.time() - self.cache[key][1]) &gt; self.expires:</li>
+<li onclick="toggle('pre37581928', 'post37581928')">            if self.background:</li>
+<li onclick="toggle('pre37581928', 'post37581928')">                threading.Thread(target=update).start()</li>
+</ol>
+  </div>
+
+<div class="commands">
+<a href='#' onclick="return varToggle(this, '37581928')"><span>&#x25b6;</span> Local vars</a>
+
+</div>
+
+<table class="vars"
+id="v37581928"
+><thead><tr><th>Variable</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>args</td><td class="code"><div>(&#39;^/rest/registry/?$&#39;,)</div></td></tr>
+<tr><td>block</td><td class="code"><div>True</div></td></tr>
+<tr><td>key</td><td class="code"><div>((&#39;^/rest/registry/?$&#39;,), ())</div></td></tr>
+<tr><td>keywords</td><td class="code"><div>{}</div></td></tr>
+<tr><td>self</td><td class="code"><div>&lt;web.utils.Memoize instance at 0x01F4AA80&gt;</div></td></tr>
+</tbody>
+</table>
+
+
+
+  </li>
+<li class="frame">
+<code>C:\autotool\web\utils.py</code> in <code>__call__</code>
+<div class="context" id="c37581968">
+<ol start="491" class="pre-context" id="pre37581968">
+<li onclick="toggle('pre37581968', 'post37581968')">            if self.running[key].acquire(block):</li>
+<li onclick="toggle('pre37581968', 'post37581968')">                try:</li>
+<li onclick="toggle('pre37581968', 'post37581968')">                    self.cache[key] = (self.func(*args, **keywords), time.time())</li>
+<li onclick="toggle('pre37581968', 'post37581968')">                finally:</li>
+<li onclick="toggle('pre37581968', 'post37581968')">                    self.running[key].release()</li>
+<li onclick="toggle('pre37581968', 'post37581968')">        </li>
+<li onclick="toggle('pre37581968', 'post37581968')">        if key not in self.cache: </li>
+</ol>
+<ol start="498" class="context-line"><li onclick="toggle('pre37581968', 'post37581968')">            update(block=True) <span>...</span></li></ol>
+<ol start='499' class="post-context" id="post37581968">
+<li onclick="toggle('pre37581968', 'post37581968')">        elif self.expires and (time.time() - self.cache[key][1]) &gt; self.expires:</li>
+<li onclick="toggle('pre37581968', 'post37581968')">            if self.background:</li>
+<li onclick="toggle('pre37581968', 'post37581968')">                threading.Thread(target=update).start()</li>
+<li onclick="toggle('pre37581968', 'post37581968')">            else:</li>
+<li onclick="toggle('pre37581968', 'post37581968')">                update()</li>
+<li onclick="toggle('pre37581968', 'post37581968')">        return self.cache[key][0]</li>
+</ol>
+  </div>
+
+<div class="commands">
+<a href='#' onclick="return varToggle(this, '37581968')"><span>&#x25b6;</span> Local vars</a>
+
+</div>
+
+<table class="vars"
+id="v37581968"
+><thead><tr><th>Variable</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>args</td><td class="code"><div>(&#39;^/rest/registry/?$&#39;,)</div></td></tr>
+<tr><td>key</td><td class="code"><div>((&#39;^/rest/registry/?$&#39;,), ())</div></td></tr>
+<tr><td>keywords</td><td class="code"><div>{}</div></td></tr>
+<tr><td>self</td><td class="code"><div>&lt;web.utils.Memoize instance at 0x01F4AA80&gt;</div></td></tr>
+<tr><td>update</td><td class="code"><div>&lt;function update at 0x023C7BB0&gt;</div></td></tr>
+</tbody>
+</table>
+
+
+
+  </li>
+<li class="frame">
+<code>C:\autotool\web\utils.py</code> in <code>re_subm</code>
+<div class="context" id="c37582008">
+<ol start="523" class="pre-context" id="pre37582008">
+<li onclick="toggle('pre37582008', 'post37582008')">    </li>
+<li onclick="toggle('pre37582008', 'post37582008')">        &gt;&gt;&gt; t, m = re_subm(&#39;g(oo+)fball&#39;, r&#39;f\\1lish&#39;, &#39;goooooofball&#39;)</li>
+<li onclick="toggle('pre37582008', 'post37582008')">        &gt;&gt;&gt; t</li>
+<li onclick="toggle('pre37582008', 'post37582008')">        &#39;foooooolish&#39;</li>
+<li onclick="toggle('pre37582008', 'post37582008')">        &gt;&gt;&gt; m.groups()</li>
+<li onclick="toggle('pre37582008', 'post37582008')">        (&#39;oooooo&#39;,)</li>
+<li onclick="toggle('pre37582008', 'post37582008')">    &quot;&quot;&quot;</li>
+</ol>
+<ol start="530" class="context-line"><li onclick="toggle('pre37582008', 'post37582008')">    compiled_pat = re_compile(pat) <span>...</span></li></ol>
+<ol start='531' class="post-context" id="post37582008">
+<li onclick="toggle('pre37582008', 'post37582008')">    proxy = _re_subm_proxy()</li>
+<li onclick="toggle('pre37582008', 'post37582008')">    compiled_pat.sub(proxy.__call__, string)</li>
+<li onclick="toggle('pre37582008', 'post37582008')">    return compiled_pat.sub(repl, string), proxy.match</li>
+<li onclick="toggle('pre37582008', 'post37582008')"></li>
+<li onclick="toggle('pre37582008', 'post37582008')">def group(seq, size): </li>
+<li onclick="toggle('pre37582008', 'post37582008')">    &quot;&quot;&quot;</li>
+</ol>
+  </div>
+
+<div class="commands">
+<a href='#' onclick="return varToggle(this, '37582008')"><span>&#x25b6;</span> Local vars</a>
+
+</div>
+
+<table class="vars"
+id="v37582008"
+><thead><tr><th>Variable</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>pat</td><td class="code"><div>&#39;^/rest/registry/?$&#39;</div></td></tr>
+<tr><td>repl</td><td class="code"><div>&#39;RegistryService&#39;</div></td></tr>
+<tr><td>string</td><td class="code"><div>u&#39;/rest/logging&#39;</div></td></tr>
+</tbody>
+</table>
+
+
+
+  </li>
+<li class="frame">
+<code>C:\autotool\web\application.py</code> in <code>_match</code>
+<div class="context" id="c37582088">
+<ol start="469" class="pre-context" id="pre37582088">
+<li onclick="toggle('pre37582088', 'post37582088')">            if isinstance(what, application):</li>
+<li onclick="toggle('pre37582088', 'post37582088')">                if value.startswith(pat):</li>
+<li onclick="toggle('pre37582088', 'post37582088')">                    f = lambda: self._delegate_sub_application(pat, what)</li>
+<li onclick="toggle('pre37582088', 'post37582088')">                    return f, None</li>
+<li onclick="toggle('pre37582088', 'post37582088')">                else:</li>
+<li onclick="toggle('pre37582088', 'post37582088')">                    continue</li>
+<li onclick="toggle('pre37582088', 'post37582088')">            elif isinstance(what, basestring):</li>
+</ol>
+<ol start="476" class="context-line"><li onclick="toggle('pre37582088', 'post37582088')">                what, result = utils.re_subm(&#39;^&#39; + pat + &#39;$&#39;, what, value) <span>...</span></li></ol>
+<ol start='477' class="post-context" id="post37582088">
+<li onclick="toggle('pre37582088', 'post37582088')">            else:</li>
+<li onclick="toggle('pre37582088', 'post37582088')">                result = utils.re_compile(&#39;^&#39; + pat + &#39;$&#39;).match(value)</li>
+<li onclick="toggle('pre37582088', 'post37582088')">                </li>
+<li onclick="toggle('pre37582088', 'post37582088')">            if result: # it&#39;s a match</li>
+<li onclick="toggle('pre37582088', 'post37582088')">                return what, [x for x in result.groups()]</li>
+<li onclick="toggle('pre37582088', 'post37582088')">        return None, None</li>
+</ol>
+  </div>
+
+<div class="commands">
+<a href='#' onclick="return varToggle(this, '37582088')"><span>&#x25b6;</span> Local vars</a>
+
+</div>
+
+<table class="vars"
+id="v37582088"
+><thead><tr><th>Variable</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>mapping</td><td class="code"><div>[[&#39;/rest/registry/?&#39;, &#39;RegistryService&#39;], [&#39;/rest/logging&#39;, &#39;LoggingService&#39;]]</div></td></tr>
+<tr><td>pat</td><td class="code"><div>&#39;/rest/registry/?&#39;</div></td></tr>
+<tr><td>self</td><td class="code"><div>&lt;web.application.application instance at 0x02336648&gt;</div></td></tr>
+<tr><td>value</td><td class="code"><div>u&#39;/rest/logging&#39;</div></td></tr>
+<tr><td>what</td><td class="code"><div>&#39;RegistryService&#39;</div></td></tr>
+</tbody>
+</table>
+
+
+
+  </li>
+<li class="frame">
+<code>C:\autotool\web\application.py</code> in <code>handle</code>
+<div class="context" id="c37582328">
+<ol start="221" class="pre-context" id="pre37582328">
+<li onclick="toggle('pre37582328', 'post37582328')">        return response</li>
+<li onclick="toggle('pre37582328', 'post37582328')"></li>
+<li onclick="toggle('pre37582328', 'post37582328')">    def browser(self):</li>
+<li onclick="toggle('pre37582328', 'post37582328')">        import browser</li>
+<li onclick="toggle('pre37582328', 'post37582328')">        return browser.AppBrowser(self)</li>
+<li onclick="toggle('pre37582328', 'post37582328')"></li>
+<li onclick="toggle('pre37582328', 'post37582328')">    def handle(self):</li>
+</ol>
+<ol start="228" class="context-line"><li onclick="toggle('pre37582328', 'post37582328')">        fn, args = self._match(self.mapping, web.ctx.path) <span>...</span></li></ol>
+<ol start='229' class="post-context" id="post37582328">
+<li onclick="toggle('pre37582328', 'post37582328')">        return self._delegate(fn, self.fvars, args)</li>
+<li onclick="toggle('pre37582328', 'post37582328')">        </li>
+<li onclick="toggle('pre37582328', 'post37582328')">    def handle_with_processors(self):</li>
+<li onclick="toggle('pre37582328', 'post37582328')">        def process(processors):</li>
+<li onclick="toggle('pre37582328', 'post37582328')">            try:</li>
+<li onclick="toggle('pre37582328', 'post37582328')">                if processors:</li>
+</ol>
+  </div>
+
+<div class="commands">
+<a href='#' onclick="return varToggle(this, '37582328')"><span>&#x25b6;</span> Local vars</a>
+
+</div>
+
+<table class="vars"
+id="v37582328"
+><thead><tr><th>Variable</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>self</td><td class="code"><div>&lt;web.application.application instance at 0x02336648&gt;</div></td></tr>
+</tbody>
+</table>
+
+
+
+  </li>
+<li class="frame">
+<code>C:\autotool\web\application.py</code> in <code>process</code>
+<div class="context" id="c37584128">
+<ol start="231" class="pre-context" id="pre37584128">
+<li onclick="toggle('pre37584128', 'post37584128')">    def handle_with_processors(self):</li>
+<li onclick="toggle('pre37584128', 'post37584128')">        def process(processors):</li>
+<li onclick="toggle('pre37584128', 'post37584128')">            try:</li>
+<li onclick="toggle('pre37584128', 'post37584128')">                if processors:</li>
+<li onclick="toggle('pre37584128', 'post37584128')">                    p, processors = processors[0], processors[1:]</li>
+<li onclick="toggle('pre37584128', 'post37584128')">                    return p(lambda: process(processors))</li>
+<li onclick="toggle('pre37584128', 'post37584128')">                else:</li>
+</ol>
+<ol start="238" class="context-line"><li onclick="toggle('pre37584128', 'post37584128')">                    return self.handle() <span>...</span></li></ol>
+<ol start='239' class="post-context" id="post37584128">
+<li onclick="toggle('pre37584128', 'post37584128')">            except web.HTTPError:</li>
+<li onclick="toggle('pre37584128', 'post37584128')">                raise</li>
+<li onclick="toggle('pre37584128', 'post37584128')">            except (KeyboardInterrupt, SystemExit):</li>
+<li onclick="toggle('pre37584128', 'post37584128')">                raise</li>
+<li onclick="toggle('pre37584128', 'post37584128')">            except:</li>
+<li onclick="toggle('pre37584128', 'post37584128')">                print &gt;&gt; web.debug, traceback.format_exc()</li>
+</ol>
+  </div>
+
+<div class="commands">
+<a href='#' onclick="return varToggle(this, '37584128')"><span>&#x25b6;</span> Local vars</a>
+
+</div>
+
+<table class="vars"
+id="v37584128"
+><thead><tr><th>Variable</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>process</td><td class="code"><div>&lt;function process at 0x023C76B0&gt;</div></td></tr>
+<tr><td>processors</td><td class="code"><div>[]</div></td></tr>
+<tr><td>self</td><td class="code"><div>&lt;web.application.application instance at 0x02336648&gt;</div></td></tr>
+</tbody>
+</table>
+
+
+
+  </li>
+  </ul>
+</div>
+
+<div id="requestinfo">
+<h2>Request information</h2>
+
+<h3>INPUT</h3>
+
+<p>No data.</p>
+
+
+
+
+
+<h3 id="cookie-info">COOKIES</h3>
+
+<p>No data.</p>
+
+
+
+
+
+<h3 id="meta-info">META</h3>
+
+<table class="req"
+><thead><tr><th>Variable</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>app_stack</td><td class="code"><div>[&lt;web.application.application instance at 0x02336648&gt;]</div></td></tr>
+<tr><td>data</td><td class="code"><div>&#39;\n{\n  &quot;startloggingrequest&quot;: {\n    &quot;srcdir&quot;: {\n      &quot;name&quot;: r&quot;C:\\ProgramData\\VMware\\VDM\\logs&quot;,\n      &quot;filefilter&quot;: &quot;.*&quot;\n    },\n    &quot;dstdir&quot;: r&quot;C:\\vdm-sdct-auto&quot;,\n    &quot;interval&quot;: &quot;5&quot;,\n    &quot;timeout&quot;: &quot;300&quot;\n  }\n}&#39;</div></td></tr>
+<tr><td>fullpath</td><td class="code"><div>u&#39;/rest/logging&#39;</div></td></tr>
+<tr><td>headers</td><td class="code"><div>[]</div></td></tr>
+<tr><td>home</td><td class="code"><div>u&#39;http://10.117.41.93:9180&#39;</div></td></tr>
+<tr><td>homedomain</td><td class="code"><div>u&#39;http://10.117.41.93:9180&#39;</div></td></tr>
+<tr><td>homepath</td><td class="code"><div>u&#39;&#39;</div></td></tr>
+<tr><td>host</td><td class="code"><div>u&#39;10.117.41.93:9180&#39;</div></td></tr>
+<tr><td>ip</td><td class="code"><div>u&#39;10.112.116.250&#39;</div></td></tr>
+<tr><td>method</td><td class="code"><div>u&#39;POST&#39;</div></td></tr>
+<tr><td>output</td><td class="code"><div>u&#39;&#39;</div></td></tr>
+<tr><td>path</td><td class="code"><div>u&#39;/rest/logging&#39;</div></td></tr>
+<tr><td>protocol</td><td class="code"><div>u&#39;http&#39;</div></td></tr>
+<tr><td>query</td><td class="code"><div>u&#39;&#39;</div></td></tr>
+<tr><td>realhome</td><td class="code"><div>u&#39;http://10.117.41.93:9180&#39;</div></td></tr>
+<tr><td>status</td><td class="code"><div>&#39;200 OK&#39;</div></td></tr>
+</tbody>
+</table>
+
+
+
+
+<h3 id="meta-info">ENVIRONMENT</h3>
+
+<table class="req"
+><thead><tr><th>Variable</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>ACTUAL_SERVER_PROTOCOL</td><td class="code"><div>&#39;HTTP/1.1&#39;</div></td></tr>
+<tr><td>CONTENT_LENGTH</td><td class="code"><div>&#39;209&#39;</div></td></tr>
+<tr><td>CONTENT_TYPE</td><td class="code"><div>&#39;application/json&#39;</div></td></tr>
+<tr><td>HTTP_ACCEPT</td><td class="code"><div>&#39;application/json&#39;</div></td></tr>
+<tr><td>HTTP_ACCEPT_ENCODING</td><td class="code"><div>&#39;identity&#39;</div></td></tr>
+<tr><td>HTTP_HOST</td><td class="code"><div>&#39;10.117.41.93:9180&#39;</div></td></tr>
+<tr><td>PATH_INFO</td><td class="code"><div>&#39;/rest/logging&#39;</div></td></tr>
+<tr><td>QUERY_STRING</td><td class="code"><div>&#39;&#39;</div></td></tr>
+<tr><td>REMOTE_ADDR</td><td class="code"><div>&#39;10.112.116.250&#39;</div></td></tr>
+<tr><td>REMOTE_PORT</td><td class="code"><div>&#39;58269&#39;</div></td></tr>
+<tr><td>REQUEST_METHOD</td><td class="code"><div>&#39;POST&#39;</div></td></tr>
+<tr><td>REQUEST_URI</td><td class="code"><div>&#39;/rest/logging&#39;</div></td></tr>
+<tr><td>SCRIPT_NAME</td><td class="code"><div>&#39;&#39;</div></td></tr>
+<tr><td>SERVER_NAME</td><td class="code"><div>&#39;localhost&#39;</div></td></tr>
+<tr><td>SERVER_PORT</td><td class="code"><div>&#39;9180&#39;</div></td></tr>
+<tr><td>SERVER_PROTOCOL</td><td class="code"><div>&#39;HTTP/1.1&#39;</div></td></tr>
+<tr><td>SERVER_SOFTWARE</td><td class="code"><div>&#39;CherryPy/3.2.0 Server&#39;</div></td></tr>
+<tr><td>wsgi.errors</td><td class="code"><div>&lt;open file &#39;&lt;stderr&gt;&#39;, mode &#39;w&#39; at 0x01D3D0D0&gt;</div></td></tr>
+<tr><td>wsgi.input</td><td class="code"><div>&lt;web.wsgiserver.KnownLengthRFile object at 0x023C8270&gt;</div></td></tr>
+<tr><td>wsgi.multiprocess</td><td class="code"><div>False</div></td></tr>
+<tr><td>wsgi.multithread</td><td class="code"><div>True</div></td></tr>
+<tr><td>wsgi.run_once</td><td class="code"><div>False</div></td></tr>
+<tr><td>wsgi.url_scheme</td><td class="code"><div>&#39;http&#39;</div></td></tr>
+<tr><td>wsgi.version</td><td class="code"><div>(1, 0)</div></td></tr>
+</tbody>
+</table>
+
+
+
+</div>
+
+<div id="explanation">
+  <p>
+    You're seeing this error because you have <code>web.config.debug</code>
+    set to <code>True</code>. Set that to <code>False</code> if you don't want to see this.
+  </p>
+</div>
+
+</body>
+</html> 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "startloggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto",
+    "interval": "5",
+    "timeout": "300"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+
+this response in PostMessage is 
+{"startloggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Users\<username>\AppData\Local\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"ziplogsresponse":{"status":"OK"}} 
+
+tell me which dir
+want zipfile name?
+server ready
+receive zip file successfully
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\Temp",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "stoploggingrequest": {
+    "srcdir": {
+      "name": r"C:\ProgramData\VMware\VDM\logs",
+      "filefilter": ".*"
+    },
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"stoploggingresponse":{"status":"OK"}} 
+
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+
+{
+  "ziplogsrequest": {
+    "dstdir": r"C:\vdm-sdct-auto"
+  }
+}
+
+
+
+this response in PostMessage is 
+{"ziplogsresponse":{"status":"OK"}} 
+
+tell me which dir
+want zipfile name?
+server ready
+receive zip file successfully

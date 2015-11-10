@@ -11,7 +11,7 @@ import os,common,webclient,time
 import conf.loggingproperties as logging_properties
 from conf.config import *
 import threading
-
+import getpass
 
 PORT = 9180
 Log_Transfer_PORT = 9280
@@ -135,10 +135,11 @@ def start_capture_logs():
 def stop_capture_logs():
     client_log_dirs = logging_properties.LogDirs['client']
     agent_log_dirs = logging_properties.LogDirs['agent']
+    current_user = getpass.getuser()
     if locals().has_key("SaveLogsDirectory"):
         local_savelog_root_dir = SaveLogsDirectory
     else:
-        local_savelog_root_dir = 'C:\\Users\\Administrator\\Desktop\\vdm-sdct-auto'
+        local_savelog_root_dir = 'C:\\Users\\%s\\Desktop\\vdm-sdct-auto' % current_user
     local_savelog_sub_dir = os.path.join(local_savelog_root_dir,time.strftime('%Y%m%d%H%M%S'))
     filefilter = r'.*'
     dst_dir = 'C:\\vdm-sdct-auto'

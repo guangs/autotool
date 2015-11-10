@@ -26,7 +26,7 @@ class LogCaptor:
         if not os.path.exists(self.src_dir):
             raise LogCaptorException('the log src dir is not existing')
         self.file_filter = file_filter
-        self.logfiles = [f for f in os.listdir(self.src_dir) if re.match(self.file_filter,f)]
+        self.logfiles = [f for f in os.listdir(self.src_dir) if re.match(self.file_filter,f) if os.path.isfile(os.path.join(self.src_dir,f))]
         self.db_key = str.lower(re.sub(r'\\|:|/','_',self.src_dir))
 
     def start(self):
