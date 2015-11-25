@@ -33,7 +33,7 @@ def download_viewclient_installer(product='view',branch='view15h2',buildtype='re
         kind)
 
 
-def install(product='view',branch='view15h2',buildtype='release',buildid='',kind='official',rds=False,brokerIP='',brokerUsername='hovdi.qa\\administrator',brokerPassword='ca$hc0w'):
+def install(product='view',branch='view15h2',buildtype='release',buildid='',kind='official',ipversion='ipv4',rds=False,brokerIP='',brokerUsername='hovdi.qa\\administrator',brokerPassword='ca$hc0w'):
     """ Install the MSI. """
     # Now download the latest view agent build
     installer_path = download_viewclient_installer(product,branch,buildtype,buildid,kind)
@@ -49,11 +49,18 @@ def install(product='view',branch='view15h2',buildtype='release',buildid='',kind
     #                                                       V
     #msi_v_args = '"/qn /l* ""%s"" REBOOT=""ReallySuppress"" "' % \
     #             os.path.join(os.path.dirname(installer_path), 'viewclient-inst.log')
-
-    if rds:
-        msi_v_args = '"/qn VDM_SERVER_NAME=%s VDM_SERVER_USERNAME=%s VDM_SERVER_PASSWORD=%s REBOOT=""ReallySuppress"" "' % (brokerIP,brokerUsername,brokerPassword)
+    if ipversion == 'ipv6':
+        IP_Protocol = 'IPv6'
     else:
-        msi_v_args = '"/qn REBOOT=""ReallySuppress"" "'
+        IP_Protocol = 'IPv4'
+
+    import socket
+    domain_name = socket.getfqdn().replace(socket.gethostname()+'.', '')
+    broker_username = domain_name + '\\' + 'administrator'
+    if rds:
+        msi_v_args = '"/qn VDM_SERVER_NAME=%s VDM_SERVER_USERNAME=%s VDM_SERVER_PASSWORD=%s VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % (brokerIP,broker_username,brokerPassword,IP_Protocol)
+    else:
+        msi_v_args = '"/qn VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % IP_Protocol
                  
     cmd_and_args = [
         installer_path,

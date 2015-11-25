@@ -30,7 +30,7 @@ def download_viewclient_installer(product='view',branch='view15h2',buildtype='re
         kind)
 
 
-def install(product='view',branch='view15h2',buildtype='release',buildid='',kind='official'):
+def install(product='view',branch='view15h2',buildtype='release',buildid='',kind='official',ipversion='ipv4'):
     """ Install the MSI. """
     # Now download the latest view agent build
     installer_path = download_viewclient_installer(product,branch,buildtype,buildid,kind)
@@ -46,9 +46,12 @@ def install(product='view',branch='view15h2',buildtype='release',buildid='',kind
     #                                                       V
     #msi_v_args = '"/qn /l* ""%s"" REBOOT=""ReallySuppress"" "' % \
     #             os.path.join(os.path.dirname(installer_path), 'viewclient-inst.log')
-    
+    if ipversion == 'ipv6':
+        IP_Protocol = 'IPv6'
+    else:
+        IP_Protocol = 'IPv4'
     #msi_v_args = '"/qn VDM_SERVER_INSTANCE_TYPE=1 FWCHOICE=1 HTMLACCESS=1 VDM_IP_PROTOCOL_USAGE=IPv4 VDM_INITIAL_ADMIN_SID=S-1-5-21-3011279443-1087069590-2703737120-500 VDM_SERVER_RECOVERY_PWD=ca$hc0w VDM_SERVER_RECOVERY_PWD_REMINDER=""ca$hc0w"" "'
-    msi_v_args = '"/qn VDM_SERVER_INSTANCE_TYPE=1 FWCHOICE=1 HTMLACCESS=1 VDM_IP_PROTOCOL_USAGE=IPv4 VDM_INITIAL_ADMIN_SID=S-1-5-21-3011279443-1087069590-2703737120-500 "'
+    msi_v_args = '"/qn VDM_SERVER_INSTANCE_TYPE=1 FWCHOICE=1 HTMLACCESS=1 VDM_IP_PROTOCOL_USAGE=%s VDM_INITIAL_ADMIN_SID=S-1-5-21-3011279443-1087069590-2703737120-500 "' % IP_Protocol
     cmd_and_args = [
         installer_path,
         '/s', # MSI slient install

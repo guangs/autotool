@@ -10,9 +10,13 @@
 import common,socket,os
 import logging
 import urllib
+import conf.installationproperties as installationproperties
+import conf.config as config
 
 RegistryURL = '/rest/registry'
 LoggingURL = '/rest/logging'
+CmdURL = '/rest/cmd'
+InstallURL = '/rest/install'
 
 SetRegistryRequestJSON = '''
 {
@@ -56,9 +60,41 @@ ZipLogsRequestJSON = '''
   }
 }'''
 
+CommandRequestJSON = '''{
+  "request": {
+    "command": "%s",
+    "interpreter": "%s",
+    "role": "%s"
+  }
+}'''
+
+# installtype: reinstall,install,uninstall
+InstallRequestJSON = '''{
+    "request": {
+        "installtype": "%s",
+        "installrole": "%s",
+        "branch": "%s",
+        "buildid": "%s",
+        "latest": "%s",
+        "kind": "%s",
+        "buildtype": "%s",
+        "ipversion": "%s",
+        "rds": "%s",
+        "broker": "%s"
+    }
+}'''
+
 logger = logging.getLogger('autotool')
 
+
 class CaptureLogException(Exception):
+    def __init__(self,value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)
+
+
+class ServiceException(Exception):
     def __init__(self,value):
         self.value = value
     def __str__(self):
@@ -204,6 +240,130 @@ def getZipLogs(localdir='C:\\Users\\Administrator\\Desktop\\dstdir',remotedir='C
             zipfile.close()
         if sock:
             sock.close()
+
+
+def enableBlastUDP(role_name,addr='localhost:9180',expectStatus =200):
+    json_postmsg = CommandRequestJSON % ('enable_blast_udp', 'program', role_name)
+    site = tuple(addr.split(':'))
+    res = common.PostMessage(site,CmdURL,json_postmsg)
+    if not res:
+        raise ServiceException('no response')
+    value = res['ResponseBody']
+    http_status = res['ResponseStatus']
+    status = value['response']['status']
+    if http_status != expectStatus:
+        raise ServiceException('error http status code')
+    if status == 'OK':
+        pass
+    elif status == 'Error':
+        description = value['response']['description']
+        raise ServiceException(description)
+    else:
+        raise ServiceException('unknown status')
+
+
+def enableBlastTCP(role_name,addr='localhost:9180',expectStatus =200):
+    json_postmsg = CommandRequestJSON % ('enable_blast_tcp', 'program', role_name)
+    site = tuple(addr.split(':'))
+    res = common.PostMessage(site,CmdURL,json_postmsg)
+    if not res:
+        raise ServiceException('no response')
+    value = res['ResponseBody']
+    http_status = res['ResponseStatus']
+    status = value['response']['status']
+    if http_status != expectStatus:
+        raise ServiceException('error http status code')
+    if status == 'OK':
+        pass
+    elif status == 'Error':
+        description = value['response']['description']
+        raise ServiceException(description)
+    else:
+        raise ServiceException('unknown status')
+
+
+def reinstallAgent(addr='localhost:9180',expectStatus =200):
+    branch = installationproperties.agent_branch
+    buildid = installationproperties.agent_buildid
+    latest = installationproperties.agent_latest
+    kind = installationproperties.agent_kind
+    buildtype = installationproperties.agent_buildtype
+    ipversion = installationproperties.agent_ipversion
+    rds = 'false'
+    broker = config.ViewBrokerHost
+    json_postmsg = InstallRequestJSON % ('reinstall', 'agent', branch, buildid, latest, kind, buildtype, ipversion, rds, broker)
+    site = tuple(addr.split(':'))
+    res = common.PostMessage(site,InstallURL,json_postmsg)
+    if not res:
+        raise ServiceException('no response')
+    value = res['ResponseBody']
+    http_status = res['ResponseStatus']
+    status = value['response']['status']
+    if http_status != expectStatus:
+        raise ServiceException('error http status code')
+    if status == 'OK':
+        pass
+    elif status == 'Error':
+        description = value['response']['description']
+        raise ServiceException(description)
+    else:
+        raise ServiceException('unknown status')
+
+
+def reinstallClient(addr='localhost:9180',expectStatus =200):
+    branch = installationproperties.client_branch
+    buildid = installationproperties.client_buildid
+    latest = installationproperties.client_latest
+    kind = installationproperties.client_kind
+    buildtype = installationproperties.client_buildtype
+    ipversion = installationproperties.client_ipversion
+    rds = ''
+    broker = config.ViewBrokerHost
+    json_postmsg = InstallRequestJSON % ('reinstall', 'client', branch, buildid, latest, kind, buildtype, ipversion, rds, broker)
+    site = tuple(addr.split(':'))
+    res = common.PostMessage(site,InstallURL,json_postmsg)
+    if not res:
+        raise ServiceException('no response')
+    value = res['ResponseBody']
+    http_status = res['ResponseStatus']
+    status = value['response']['status']
+    if http_status != expectStatus:
+        raise ServiceException('error http status code')
+    if status == 'OK':
+        pass
+    elif status == 'Error':
+        description = value['response']['description']
+        raise ServiceException(description)
+    else:
+        raise ServiceException('unknown status')
+
+
+def reinstallBroker(addr='localhost:9180',expectStatus =200):
+    branch = installationproperties.agent_branch
+    buildid = installationproperties.agent_buildid
+    latest = installationproperties.agent_latest
+    kind = installationproperties.agent_kind
+    buildtype = installationproperties.agent_buildtype
+    ipversion = installationproperties.agent_ipversion
+    rds = ''
+    broker = config.ViewBrokerHost
+    json_postmsg = InstallRequestJSON % ('reinstall', 'broker', branch, buildid, latest, kind, buildtype, ipversion, rds, broker)
+    site = tuple(addr.split(':'))
+    res = common.PostMessage(site,InstallURL,json_postmsg)
+    if not res:
+        raise ServiceException('no response')
+    value = res['ResponseBody']
+    http_status = res['ResponseStatus']
+    status = value['response']['status']
+    if http_status != expectStatus:
+        raise ServiceException('error http status code')
+    if status == 'OK':
+        pass
+    elif status == 'Error':
+        description = value['response']['description']
+        raise ServiceException(description)
+    else:
+        raise ServiceException('unknown status')
 
 if __name__ == '__main__':
     'to test it'

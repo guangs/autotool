@@ -1,23 +1,36 @@
 # Lab info
-'''
+# hostname or IP of all machines
 win7x64_client = 'guangs-PC.hovdi.qa'
-win10x64_client = 'DESKTOP-NBA7QBS'
+win10x64_client = 'guangs-win10'
 
-win10x64_agent = 'DESKTOP-L0B6NOP.hovdi.qa'
-win7x64_agent = 'guangsx-PC.hovdi.qa'
+automation_win7 = 'guangs-win7x86.hovdi.qa'
+win7x86_agent = 'guangs-win7x86.hovdi.qa'
+win7x64_agent = 'guangs-win7x64.hovdi.qa'
+win10x64_agent = 'DESKTOP-UV0N5BK.hovdi.qa'
 win2012r2_agent = 'guangs-win2012r2.hovdi.qa'
-win81x64_agent = 'guangs-win81x64_agent'
-'''
-ClientHost = '10.112.116.131'
-AgentHost = '10.117.41.93'
+win81x64_agent = 'guangs-win81x64.hovdi.qa'
 
+win2k8_broker = '10.117.46.231'
 
+# My all machines info, install/uninstall/reinstall builds
+# suggest configure it using hostname instead of dynamic IP {<host_alias>:<hostname or IP>}
+ViewClientHost_All = {'win7x64_client': win7x64_client,
+                      'win10x64_client': win10x64_client,
+                      }
+ViewAgentHost_All = {'win7x86_agent': win7x86_agent,
+                     'win7x64_agent': win7x64_agent,
+                     'automation_win7': automation_win7,
+                     'win10x64_agent': win10x64_agent,
+                     'win81x64_agent': win81x64_agent,
+                     'win2012r2_agent': win2012r2_agent,
+                     }
+ViewBrokerHost_All = {'win2k8_broker': win2k8_broker,
+                      }
 
-
-
-
-
-
+# Define which nodes you are using, enable/collect logs on those nodes
+ViewClientHost = '127.0.0.1'
+ViewAgentHost = win7x64_agent
+ViewBrokerHost = '10.117.46.231'
 
 
 # SaveLogsDirectory = 'C:\\Users\\Administrator\\Desktop\\vdm-sdct-auto'

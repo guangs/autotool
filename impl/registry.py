@@ -80,7 +80,7 @@ class Registry(object):
             hkey, subkey = self.__split_keypath(keypath)
             if hkey in filter(str.isupper, dir(HKEY)):
                 try:
-                    key = wreg.OpenKey(HKEY.__dict__.get(hkey), subkey, 0, RIGHT.ALL_ACCESS)
+                    key = wreg.OpenKey(HKEY.__dict__.get(hkey), subkey, 0, RIGHT.ALL_ACCESS | wreg.KEY_WOW64_64KEY)
                     #print "update existing reg"
                 except WindowsError:
                     key = wreg.CreateKey(HKEY.__dict__.get(hkey), subkey)
@@ -105,7 +105,7 @@ class Registry(object):
             self.lock.acquire()
             hkey, subkey = self.__split_keypath(keypath)
             if hkey in filter(str.isupper, dir(HKEY)):
-                key = wreg.OpenKey(HKEY.__dict__.get(hkey), subkey, 0,RIGHT.ALL_ACCESS)
+                key = wreg.OpenKey(HKEY.__dict__.get(hkey), subkey, 0,RIGHT.ALL_ACCESS | wreg.KEY_WOW64_64KEY)
                 if not name:
                     wreg.DeleteKeyEx(HKEY.__dict__.get(hkey),subkey)
                 else:

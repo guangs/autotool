@@ -12,24 +12,33 @@ import conf.loggingproperties as logging_properties
 from conf.config import *
 import threading
 import getpass
+import platform
 
 PORT = 9180
 Log_Transfer_PORT = 9280
 print locals().keys()
-if locals().has_key("ClientHost"):
-    CLIENT_HOSTS = ClientHost
+if locals().has_key("ViewClientHost"):
+    CLIENT_HOSTS = ViewClientHost
 else:
     CLIENT_HOSTS = []
 
-if locals().has_key("AgentHost"):
-    AGENT_HOSTS = AgentHost
+if locals().has_key("ViewAgentHost"):
+    AGENT_HOSTS = ViewAgentHost
 else:
     AGENT_HOSTS = []
+
+if "ViewBrokerHost" in locals():
+    BROKER_HOSTS = ViewBrokerHost
+else:
+    BROKER_HOSTS = []
+
 
 if isinstance(CLIENT_HOSTS,str):
     CLIENT_HOSTS = [CLIENT_HOSTS]
 if isinstance(AGENT_HOSTS,str):
     AGENT_HOSTS = [AGENT_HOSTS]
+if isinstance(BROKER_HOSTS,str):
+    BROKER_HOSTS = [BROKER_HOSTS]
 
 class MyThread(threading.Thread):
     def __init__(self,target=None,args=None):
@@ -136,10 +145,14 @@ def stop_capture_logs():
     client_log_dirs = logging_properties.LogDirs['client']
     agent_log_dirs = logging_properties.LogDirs['agent']
     current_user = getpass.getuser()
+    local_savelog_root_dir= ''
     if locals().has_key("SaveLogsDirectory"):
         local_savelog_root_dir = SaveLogsDirectory
     else:
-        local_savelog_root_dir = 'C:\\Users\\%s\\Desktop\\vdm-sdct-auto' % current_user
+        if platform.system() is 'Windows':
+            local_savelog_root_dir = 'C:\\Users\\%s\\Desktop\\vdm-sdct-auto' % current_user
+        else: #Linux
+            local_savelog_root_dir = '/home/%s/Desktop/vdm-sdct-auto' % current_user
     local_savelog_sub_dir = os.path.join(local_savelog_root_dir,time.strftime('%Y%m%d%H%M%S'))
     filefilter = r'.*'
     dst_dir = 'C:\\vdm-sdct-auto'
@@ -164,6 +177,57 @@ def stop_capture_logs():
     except webclient.CaptureLogException,e:
         print 'stop capture logs failed with description<' + e.value + '>, please retry'
 
+
+def enable_blast_udp():
+    try:
+        for CLIENT_HOST in CLIENT_HOSTS:
+            webclient.enableBlastUDP('view_client',CLIENT_HOST+':'+str(PORT))
+        for AGENT_HOST in AGENT_HOSTS:
+            webclient.enableBlastUDP('view_agent',AGENT_HOST+':'+str(PORT))
+        for BROKER_HOST in BROKER_HOSTS:
+            webclient.enableBlastUDP('view_broker',BROKER_HOST+':'+str(PORT))
+        print 'enable blast udp successfully'
+    except webclient.ServiceException,e:
+        print 'enable blast udp failed with description<' + e.value + '>, please retry'
+
+
+def enable_blast_tcp():
+    try:
+        for CLIENT_HOST in CLIENT_HOSTS:
+            webclient.enableBlastTCP('view_client',CLIENT_HOST+':'+str(PORT))
+        for AGENT_HOST in AGENT_HOSTS:
+            webclient.enableBlastTCP('view_agent',AGENT_HOST+':'+str(PORT))
+        for BROKER_HOST in BROKER_HOSTS:
+            webclient.enableBlastTCP('view_broker',BROKER_HOST+':'+str(PORT))
+        print 'enable blast tcp successfully'
+    except webclient.ServiceException,e:
+        print 'enable blast tcp failed with description<' + e.value + '>, please retry'
+
+
+def reinstall_agent(selected_machines):
+    try:
+        for AGENT_HOST in selected_machines:
+            webclient.reinstallAgent(AGENT_HOST+':'+str(PORT))
+        print 'starting reinstall view agent successfully'
+    except webclient.ServiceException,e:
+        print 'starting reinstall view agent failed with description<' + e.value + '>, please retry'
+
+def reinstall_client(selected_machines):
+    try:
+        for CLIENT_HOST in selected_machines:
+            webclient.reinstallClient(CLIENT_HOST+':'+str(PORT))
+        print 'starting reinstall view client successfully'
+    except webclient.ServiceException,e:
+        print 'starting reinstall view client with description<' + e.value + '>, please retry'
+
+
+def reinstall_broker(selected_machines):
+    try:
+        for BROKER_HOST in selected_machines:
+            webclient.reinstallBroker(BROKER_HOST+':'+str(PORT))
+        print 'starting reinstall view broker successfully'
+    except webclient.ServiceException,e:
+        print 'starting reinstall view broker failed with description<' + e.value + '>, please retry'
 
 if __name__ == '__main__':
     enable_configured_logs()

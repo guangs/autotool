@@ -13,9 +13,12 @@ import re
 import os
 import urllib
 from impl import *
+import threading
 
 urls = ('/rest/registry/?', 'RegistryService',
         '/rest/logging','LoggingService',
+        '/rest/cmd','CommandService',
+        '/rest/install','InstallService',
        )
 SetRegistryResponseJSON = '{"registry":{"status":"OK"}}'
 SetRegistryResponseJSON_Error = '{"registry":{"status":"Error"}}'
@@ -47,6 +50,21 @@ ZipLogsResponseJSON_Error = '''{
 LoggingResponseJSON_Error = '{"loggingresponse":{"status":"Error"}}'
 LoggingResponseJSON_NotSupport = '{"loggingresponse":{"status":"Not Support Request"}}'
 
+CommandResponseJSON = '{"response":{"status":"OK"}}'
+CommandResponseJSON_Error = '''{
+  "response": {
+    "status": "Error",
+    "description": "%s"
+  }
+}'''
+
+InstallResponseJSON = '{"response":{"status":"OK"}}'
+InstallResponseJSON_Error = '''{
+  "response": {
+    "status": "Error",
+    "description": "%s"
+  }
+}'''
 
 class RegistryService(object):
     def GET(self):
@@ -174,6 +192,86 @@ class LoggingService(object):
         dstdir = logcaptor.LogCaptor._replace_username(request['dstdir'])
         logcaptor.LogCaptor.zip_logs(dstdir)
 
+
+class CommandService(object):
+
+    def POST(self):
+        try:
+            web.header('Content-Type', 'application/json')
+            body = web.data().strip()
+            print body
+            msgobj = eval(body)
+            if 'request' in msgobj.keys():
+                try:
+                    request = msgobj['request']
+                    command = request['command']
+                    interpreter = request['interpreter']
+                    role = request['role']
+                    cmdexecutor.execute(command,interpreter,role)
+                    return CommandResponseJSON
+                except cmdexcutor.CommandException,e:
+                    return CommandResponseJSON_Error % e.value
+            else:
+                'not support'
+                return CommandResponseJSON_Error % 'not support'
+        except AttributeError:
+            print 'there is error'
+            return CommandResponseJSON_Error % 'there is AttributeError'
+
+class InstallService(object):
+
+    def POST(self):
+        try:
+            web.header('Content-Type', 'application/json')
+            body = web.data().strip()
+            print body
+            msgobj = eval(body)
+            if 'request' in msgobj.keys():
+                try:
+                    request = msgobj['request']
+                    installtype = request['installtype']
+                    installrole = request['installrole']
+                    branch = request['branch']
+                    buildid = request['buildid']
+                    latest = request['latest']
+                    kind = request['kind']
+                    buildtype = request['buildtype']
+                    ipversion = request['ipversion']
+                    rds = request['rds']
+                    broker = request['broker']
+                    if installtype == 'reinstall':
+                        if installrole == 'agent':
+                            installer.agent_reinstall(branch,buildid,latest,kind,buildtype,ipversion,rds,broker)
+                        elif installrole == 'client':
+                            installer.client_reinstall(branch,buildid,latest,kind,buildtype,ipversion)
+                        else:
+                            installer.broker_reinstall(branch,buildid,latest,kind,buildtype,ipversion)
+                    elif installtype == 'install':
+                        if installrole == 'agent':
+                            installer.agent_install(branch,buildid,latest,kind,buildtype,ipversion,rds,broker)
+                        elif installrole == 'client':
+                            installer.client_install(branch,buildid,latest,kind,buildtype,ipversion)
+                        else:
+                            installer.broker_install(branch,buildid,latest,kind,buildtype,ipversion)
+                    elif installtype == 'uninstall':
+                        if installrole == 'agent':
+                            installer.agent_uninstall()
+                        elif installrole == 'client':
+                            installer.client_uninstall()
+                        else:
+                            installer.broker_uninstall()
+                    else:
+                        return InstallResponseJSON_Error % 'Not support install type'
+                    return InstallResponseJSON
+                except installer.InstallException,e:
+                    return InstallResponseJSON_Error % e.value
+            else:
+                'not support'
+                return InstallResponseJSON_Error % 'not support'
+        except AttributeError:
+            print 'there is error'
+            return InstallResponseJSON_Error % 'there is AttributeError'
+
 def start_web_services():
     # start log transfer server in sub thread
     logtransfer.start_server()
@@ -181,10 +279,24 @@ def start_web_services():
     app = web.application(urls, globals())
     app.run()
 
+
+def handle_reboot_after_tasks():
+    if not os.path.exists('C:\\Temp\\reboot_after_tasks.txt'):
+        return
+    with open('C:\\Temp\\reboot_after_tasks.txt', 'r') as f:
+        tasks = f.readlines()
+    for task in tasks:
+        exec('''%s''' % task)
+    os.remove('C:\\Temp\\reboot_after_tasks.txt')
+
+
 def create_tempdir():
     if not os.path.exists('C:\\Temp'):
         os.makedirs('C:\\Temp')
 
 if __name__ == "__main__":
     create_tempdir()
+    t = threading.Thread(target=handle_reboot_after_tasks)
+    # t.setDaemon(True)
+    t.start()
     start_web_services()

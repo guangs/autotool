@@ -30,7 +30,7 @@ def download_viewclient_installer(product='viewcrt',branch='crt-15q3',buildtype=
         kind)
 
 
-def install(product='viewcrt',branch='crt-15q3',buildtype='release',buildid='2999900',kind='official'):
+def install(product='viewcrt',branch='crt-15q3',buildtype='release',buildid='2999900',kind='official',ipversion='ipv4'):
     """ Install the MSI. """
     # Now download the latest view agent build
     installer_path = download_viewclient_installer(product,branch,buildtype,buildid,kind)
@@ -46,7 +46,10 @@ def install(product='viewcrt',branch='crt-15q3',buildtype='release',buildid='299
     #                                                       V
     #msi_v_args = '"/qn /l* ""%s"" REBOOT=""ReallySuppress"" "' % \
     #             os.path.join(os.path.dirname(installer_path), 'viewclient-inst.log')
-    
+    if ipversion == 'ipv6':
+        IP_Protocol = 'IPv6'
+    else:
+        IP_Protocol = 'IPv4'
     ## uninstall..
     msi_v_args_uni = '"/qn REMOVE=ALL REBOOT=""ReallySuppress"" "' 
     cmd_and_args_uni = [
@@ -56,7 +59,7 @@ def install(product='viewcrt',branch='crt-15q3',buildtype='release',buildid='299
         msi_v_args_uni]
 
     ## install..
-    msi_v_args = '"/qn REBOOT=""ReallySuppress"" "'            
+    msi_v_args = '"/qn VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % IP_Protocol
     cmd_and_args = [
         installer_path,
         '/s', # MSI slient install
