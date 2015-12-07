@@ -1,3 +1,11 @@
+# =====================================================================================
+# description     :It is the implementation to collect logs for web service
+# author          :Guang Shi
+# email           :gshi@vmware.com
+# version         :0.1
+# date            :2015/9/2
+# python version  :2.7
+# =====================================================================================
 import os
 import re
 import shutil
@@ -6,7 +14,15 @@ import getpass
 import glob
 import zipfile
 import threading
+import registry
 
+def get_current_user():
+    reg = registry.Registry()
+    user = reg.get_value('HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Authentication\\LogonUI','LastLoggedOnUser')
+    if user:
+        return str(user.split('\\')[-1])
+    else:
+        return 'Administrator'
 
 class LogCaptorException(Exception):
     def __init__(self,value):
@@ -19,6 +35,7 @@ start_time = None
 #start_timeout = 60*config_file.StartCaptureLogTimeout
 start_timeout = 60*10
 common_data = {}
+
 class LogCaptor:
     lock = threading.Lock()
     def __init__(self,src_dir,file_filter=r'.*'):
@@ -91,7 +108,8 @@ class LogCaptor:
             return tf.tell()
     @staticmethod
     def _replace_username(dirname):
-        real_username = getpass.getuser()
+        # real_username = getpass.getuser()
+        real_username = get_current_user()
         return dirname.replace('<username>',real_username)
 
     @staticmethod

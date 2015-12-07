@@ -1,3 +1,11 @@
+# ===============================================================================
+# description     :It can convert automation report to Junit report, so Jenkins can parse it.
+# author          :Guang Shi
+# email           :gshi@vmware.com
+# version         :0.1
+# date            :2015/09/23
+# python version  :2.7
+# ===============================================================================
 import sys
 import re
 import shutil

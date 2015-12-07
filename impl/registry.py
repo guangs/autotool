@@ -1,3 +1,11 @@
+# =====================================================================================
+# description     :It is the implementation to modify windows registry for web service
+# author          :Guang Shi
+# email           :gshi@vmware.com
+# version         :0.1
+# date            :2015/9/2
+# python version  :2.7
+# =====================================================================================
 import _winreg as wreg
 import argparse
 import threading

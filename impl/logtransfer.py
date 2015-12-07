@@ -1,3 +1,11 @@
+# =====================================================================================
+# description     :It is the implementation to transfer collected logs for web service
+# author          :Guang Shi
+# email           :gshi@vmware.com
+# version         :0.1
+# date            :2015/9/2
+# python version  :2.7
+# =====================================================================================
 import SocketServer
 import logcaptor
 import threading
@@ -41,6 +49,10 @@ class LogTransferRequestHandler(SocketServer.StreamRequestHandler):
                 self.request.send('Not invalid request')
         except Exception, e:
             print e
+        # finally:
+        #     import time
+        #     time.sleep(1)
+        #     self.request.close()
 
     def send_file(self,filename):
         pass

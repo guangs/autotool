@@ -100,6 +100,34 @@ def disable_thinprint_logs():
             webclient.delRegistryValue(key,name,AGENT_HOST+':'+str(PORT))
     print 'Disable ThinPrint logs successfully'
 
+def enable_blast_logs():
+    temp_parser = common.RegistryMultipleFilesParser(logging_properties.BlastLogEnabled['agent'])
+    for key,name,value,type in temp_parser.parse():
+        for AGENT_HOST in AGENT_HOSTS:
+            webclient.setRegistryValue(key,name,value,type,AGENT_HOST+':'+str(PORT))
+    print 'Enable Blast logs successfully'
+
+def disable_blast_logs():
+    temp_parser = common.RegistryMultipleFilesParser(logging_properties.BlastLogEnabled['agent'])
+    for key,name,value,type in temp_parser.parse():
+        for AGENT_HOST in AGENT_HOSTS:
+            webclient.delRegistryValue(key,name,AGENT_HOST+':'+str(PORT))
+    print 'Disable Blast logs successfully'
+
+def enable_h264_logs():
+    temp_parser = common.RegistryMultipleFilesParser(logging_properties.H264LogEnabled['agent'])
+    for key,name,value,type in temp_parser.parse():
+        for AGENT_HOST in AGENT_HOSTS:
+            webclient.setRegistryValue(key,name,value,type,AGENT_HOST+':'+str(PORT))
+    print 'Enable H264 logs successfully'
+
+def disable_h264_logs():
+    temp_parser = common.RegistryMultipleFilesParser(logging_properties.H264LogEnabled['agent'])
+    for key,name,value,type in temp_parser.parse():
+        for AGENT_HOST in AGENT_HOSTS:
+            webclient.delRegistryValue(key,name,AGENT_HOST+':'+str(PORT))
+    print 'Disable H264 logs successfully'
+
 def enable_configured_logs():
     'not finish yet'
     pass
@@ -228,6 +256,22 @@ def reinstall_broker(selected_machines):
         print 'starting reinstall view broker successfully'
     except webclient.ServiceException,e:
         print 'starting reinstall view broker failed with description<' + e.value + '>, please retry'
+
+def update_autotool(selected_machines):
+    try:
+        for HOST in selected_machines:
+            webclient.upgradeAutotool(HOST+':'+str(PORT))
+        print 'update autotool successfully'
+    except webclient.ServiceException,e:
+        print 'update autotool failed with description<' + e.value + '>, please retry'
+
+def reboot_machine(selected_machines):
+    try:
+        for HOST in selected_machines:
+            webclient.rebootMachine(HOST+':'+str(PORT))
+        print 'reboot machine successfully'
+    except webclient.ServiceException,e:
+        print 'reboot machine failed with description<' + e.value + '>, please retry'
 
 if __name__ == '__main__':
     enable_configured_logs()

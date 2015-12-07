@@ -6,7 +6,7 @@
 # date            :2015/08/23
 # python version  :2.7
 # =====================================================================================
-
+#
 import common,socket,os
 import logging
 import urllib
@@ -62,7 +62,7 @@ ZipLogsRequestJSON = '''
 
 CommandRequestJSON = '''{
   "request": {
-    "command": "%s",
+    "command": r"%s",
     "interpreter": "%s",
     "role": "%s"
   }
@@ -236,10 +236,11 @@ def getZipLogs(localdir='C:\\Users\\Administrator\\Desktop\\dstdir',remotedir='C
                     zipfile.write(data)
                 break
     finally:
-        if zipfile:
-            zipfile.close()
         if sock:
             sock.close()
+        if zipfile:
+            zipfile.close()
+
 
 
 def enableBlastUDP(role_name,addr='localhost:9180',expectStatus =200):
@@ -281,6 +282,45 @@ def enableBlastTCP(role_name,addr='localhost:9180',expectStatus =200):
     else:
         raise ServiceException('unknown status')
 
+def upgradeAutotool(addr='localhost:9180',expectStatus =200,role_name='view_client'):
+    bat_command = r"net use y: \\sanya.eng.vmware.com\exchange\gshi /user:sanya\gshi vmware;ping 127.0.0.1 -n 10;y:\automation\autotool\dispatch.bat;net use /delete y:;ping 127.0.0.1 -n 10"
+    json_postmsg = CommandRequestJSON % (bat_command, 'bat', role_name)
+    site = tuple(addr.split(':'))
+    res = common.PostMessage(site,CmdURL,json_postmsg)
+    if not res:
+        raise ServiceException('no response')
+    value = res['ResponseBody']
+    http_status = res['ResponseStatus']
+    status = value['response']['status']
+    if http_status != expectStatus:
+        raise ServiceException('error http status code')
+    if status == 'OK':
+        pass
+    elif status == 'Error':
+        description = value['response']['description']
+        raise ServiceException(description)
+    else:
+        raise ServiceException('unknown status')
+
+def rebootMachine(addr='localhost:9180',expectStatus =200,role_name='view_client'):
+    bat_command = r"shutdown -r -t 5"
+    json_postmsg = CommandRequestJSON % (bat_command, 'bat', role_name)
+    site = tuple(addr.split(':'))
+    res = common.PostMessage(site,CmdURL,json_postmsg)
+    if not res:
+        raise ServiceException('no response')
+    value = res['ResponseBody']
+    http_status = res['ResponseStatus']
+    status = value['response']['status']
+    if http_status != expectStatus:
+        raise ServiceException('error http status code')
+    if status == 'OK':
+        pass
+    elif status == 'Error':
+        description = value['response']['description']
+        raise ServiceException(description)
+    else:
+        raise ServiceException('unknown status')
 
 def reinstallAgent(addr='localhost:9180',expectStatus =200):
     branch = installationproperties.agent_branch

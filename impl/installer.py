@@ -1,3 +1,11 @@
+# =====================================================================================
+# description     :It is the implementation to install/reinstall/uninstall view for web service
+# author          :Guang Shi
+# email           :gshi@vmware.com
+# version         :0.2
+# date            :2015/11/26
+# python version  :2.7
+# =====================================================================================
 import os
 from ext import *
 import windows
@@ -20,6 +28,10 @@ def agent_reinstall(branch,buildid,latest,kind,buildtype,ipversion,rds,broker):
             pending_tasks = f.read()
         if 'agent_install' not in pending_tasks:
             with open('C:\\Temp\\reboot_after_tasks.txt','a+') as f:
+                f.write("installer.agent_install('%s','%s','%s','%s','%s','%s','%s','%s')" % (branch,buildid,latest,kind,buildtype,ipversion,rds,broker))
+        else:
+            # there is error in last time, reset pending tasks
+            with open('C:\\Temp\\reboot_after_tasks.txt','w+') as f:
                 f.write("installer.agent_install('%s','%s','%s','%s','%s','%s','%s','%s')" % (branch,buildid,latest,kind,buildtype,ipversion,rds,broker))
     t = threading.Thread(target=agent_uninstall)
     t.start()

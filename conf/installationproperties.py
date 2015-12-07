@@ -11,6 +11,9 @@ agent_buildtype = 'release'
 # 'ipv4' or 'ipv6'
 agent_ipversion = 'ipv4'
 
+# ADDLOCAL=VmVideo,RTAV,SVIAgent,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,BlastProtocol,ClientDriveRedirection,PCoIP,UnityTouch,FLASHMMR
+
+
 
 
 

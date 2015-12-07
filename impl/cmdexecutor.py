@@ -1,8 +1,17 @@
+# ==================================================================================================
+# description     :It is the implementation for cmd line web service, support bat and python
+# author          :Guang Shi
+# email           :gshi@vmware.com
+# version         :0.2
+# date            :2015/11/10
+# python version  :2.7
+# ==================================================================================================
 import registry
 import subprocess
 import getpass
 import os
 import re
+import registry
 
 class CommandException(Exception):
     def __init__(self,value):
@@ -10,9 +19,18 @@ class CommandException(Exception):
     def __str__(self):
         return repr(self.value)
 
+def get_current_user():
+    reg = registry.Registry()
+    user = reg.get_value('HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Authentication\\LogonUI','LastLoggedOnUser')
+    if user:
+        return str(user.split('\\')[-1])
+    else:
+        return 'Administrator'
+
 
 def client_enable_blast_udp():
-    current_user = getpass.getuser()
+    # current_user = getpass.getuser()
+    current_user = get_current_user()
     config_ini_dir = 'C:\\Users\\%s\\AppData\\Roaming\\VMware' % current_user
     config_ini_file = os.path.join(config_ini_dir,'config.ini')
     if os.path.exists(config_ini_file) and os.path.isfile(config_ini_file):
@@ -35,7 +53,8 @@ def client_enable_blast_udp():
 
 
 def client_enable_blast_tcp():
-    current_user = getpass.getuser()
+    # current_user = getpass.getuser()
+    current_user = get_current_user()
     config_ini_dir = 'C:\\Users\\%s\\AppData\\Roaming\\VMware' % current_user
     config_ini_file = os.path.join(config_ini_dir,'config.ini')
     if os.path.exists(config_ini_file) and os.path.isfile(config_ini_file):
@@ -176,16 +195,24 @@ def broker_execute(command, interpreter):
 
 # reserved for further
 def python_execute(command):
-    with open('temp.py', 'w+') as temp_file:
+    with open('C:\\Windows\\Temp\\temp.py', 'w+') as temp_file:
         temp_file.write(command)
-    subprocess.call('python temp.py', shell=True)
-
+    subprocess.call('python C:\\Windows\\Temp\\temp.py', shell=True)
 
 # reserved for further
 def bat_execute(command):
-    with open('temp.bat', 'w+') as temp_file:
-        temp_file.write(command)
-    subprocess.call('temp.bat', shell=True)
+    with open('C:\\Windows\\Temp\\temp.bat', 'w+') as temp_file:
+        temp_file.writelines(command.replace(';','\n'))
+        # walk around for update autotool issue: log transfer server could not shutdown when stop Autotool windows service
+        if "dispatch.bat" in command:
+            import logtransfer,time
+            logtransfer.stop_server()
+            time.sleep(3)
+    try:
+        subprocess.check_call('start C:\\Windows\\Temp\\temp.bat', shell=True)
+    except subprocess.CalledProcessError as e:
+        print "bat execute failed with error code %d" % e.returncode
+
 
 
 def program_execute(command):

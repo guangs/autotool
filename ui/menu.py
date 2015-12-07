@@ -47,30 +47,29 @@ class ViewMenu(Menu):
 
 class MainMenu(ViewMenu):
     items = [('Category','',''),
-             ('1.  Configure Logs for Clients and Agents','','menu1'),
-             ('2.  Collect Logs from Clients and Agents','','menu2'),
-             ('3.  Enable Blast UDP/TCP','','menu3'),
-             ('4.  Reinstall Agent Build','','menu4'),
-             ('5.  Reinstall Client Build','','menu5'),
-             ('6.  Reinstall Broker Build','','menu6'),
-             ('7.  <Reboot Machine>','','menux'),
-             ('8.  <Activate Windows OS>','','menux'),
-             ('9.  <Uninstall Client Build>','','menux'),
-             ('10. <Uninstall Agent Build>','','menux'),
-             ('11. <Uninstall Broker Build>','','menux'),
-             ('12. <Install Client Build>','','menux'),
-             ('13. <Install Agent Build>','','menux'),
-             ('14. <Install Broker Build>','','menux'),
-             ('15. <Run Python Script on Remote Machine>','','menux'),
-             ('16. <Run Batch Script on Remote Machine>','','menux'),
-             ('17. <Reboot Machine>','','menux'),
-             ('18. <Install Python on Remote Machine>','','menux'),
-             ('19. <Install Java on Remote Machine>','','menux'),
-             ('20. <Install Windows Update on Remote Machine>','','menux'),
+             ('1.  Configure Logs for test bed','','menu1'),
+             ('2.  Collect Logs from test bed','','menu2'),
+             ('3.  Enable Blast UDP/TCP for test bed','','menu3'),
+             ('4.  Reinstall View Agent Build','','menu4'),
+             ('5.  Reinstall View Client Build','','menu5'),
+             ('6.  Reinstall View Broker Build','','menu6'),
+             ('7.  Reboot Windows Machines','','menu7'),
+             ('8.  Activate Local Windows OS','','menu8'),
+             ('9.  Upgrade AutoTool','','menu9'),
+             ('10. <Uninstall Client Build>','','menux'),
+             ('11. <Uninstall Agent Build>','','menux'),
+             ('12. <Uninstall Broker Build>','','menux'),
+             ('13. <Install Client Build>','','menux'),
+             ('14. <Install Agent Build>','','menux'),
+             ('15. <Install Broker Build>','','menux'),
+             ('16. <Install .Net Framework>','','menux'),
+             ('17. <Install Java>','','menux'),
+             ('18. <Install Printers>','','menux'),
+             ('19. <Install Microsoft Office>','','menux'),
+             ('20. <Install Windows Update>','','menux'),
              ('21. <Create New VM on ESX Host>','','menux'),
-             ('22. <Install Printer on Remote Machine>','','menux'),
-             ('23. <Get Current Build Number>','','menux'),
-             ('24. <Update Autotool on Remote Machine>','','menux'),]
+             ('22. <Get Current Build Number>','','menux'),
+             ('23. <Configure Automation>','','menux'),]
     raw_input_choices = ['!','<','n'] + [str(num) for num in range(1,len(items))]
     @classmethod
     def menu1(cls):
@@ -93,7 +92,16 @@ class MainMenu(ViewMenu):
     @classmethod
     def menu6(cls):
         Frame.exec_menu('BrokerReinstallMenu')
-
+    @classmethod
+    def menu7(cls):
+        Frame.exec_menu('RebootMachineMenu')
+    @classmethod
+    def menu8(cls):
+        import subprocess
+        subprocess.call('start C:\\autotool\\scripts\\Microsoft_KMS-MAK_activation.bat',shell=True)
+    @classmethod
+    def menu9(cls):
+        Frame.exec_menu('UpdateAutoToolMenu')
     @classmethod
     def menux(cls):
         print 'Not support yet'
@@ -104,11 +112,13 @@ class LogConfigMenu(EditMenu):
     items = [['Category','Selection',''],
              ['1.  Enable DCT Logs','[ ]','update'],
              ['2.  Enable ThinPrint Logs','[ ]','update'],
-             ['3.  <Enable Serial Logs>','[ ]','update'],
-             ['4.  <Enable Scanner Logs>','[ ]','update'],
-             ['5.  <Enable Installer Logs>','[ ]','update'],
-             ['6.  <Enable PCoIP Logs>','[ ]','update'],
-             ['7.  <Enable MKS Logs>','[ ]','update'],]
+             ['3.  Enable Blast Logs','[ ]','update'],
+             ['4.  Enable H264 Logs','[ ]','update'],
+             ['5.  <Enable Serial Logs>','[ ]','update'],
+             ['6.  <Enable Scanner Logs>','[ ]','update'],
+             ['7.  <Enable Installer Logs>','[ ]','update'],
+             ['8.  <Enable PCoIP Logs>','[ ]','update'],
+             ['9.  <Enable MKS Logs>','[ ]','update'],]
     raw_input_choices = ['ok','a','!','<','n'] + [str(num) for num in range(1,len(items))]
     @classmethod
     def update(cls,index):
@@ -150,30 +160,42 @@ class LogConfigMenu(EditMenu):
             log_flags['ThinPrint'] = False
             application.disable_thinprint_logs()
         if cls.items[3][1] == '[*]':
+            log_flags['Blast'] = True
+            application.enable_blast_logs()
+        else:
+            log_flags['Blast'] = False
+            application.disable_blast_logs()
+        if cls.items[4][1] == '[*]':
+            log_flags['H264'] = True
+            application.enable_h264_logs()
+        else:
+            log_flags['H264'] = False
+            application.disable_h264_logs()
+        if cls.items[5][1] == '[*]':
             log_flags['Serial'] = True
             print 'Enable Serial logs successfully'
         else:
             log_flags['Serial'] = False
             print 'Disable Serial logs successfully'
-        if cls.items[4][1] == '[*]':
+        if cls.items[6][1] == '[*]':
             log_flags['Scanner'] = True
             print 'Enable Scanner logs successfully'
         else:
             log_flags['Scanner'] = False
             print 'Disable Scanner logs successfully'
-        if cls.items[5][1] == '[*]':
+        if cls.items[7][1] == '[*]':
             log_flags['Installer'] = True
             print 'Enable Installer logs successfully'
         else:
             log_flags['Installer'] = False
             print 'Disable Installer logs successfully'
-        if cls.items[6][1] == '[*]':
+        if cls.items[8][1] == '[*]':
             log_flags['PCoIP'] = True
             print 'Enable PCoIP logs successfully'
         else:
             log_flags['PCoIP'] = False
             print 'Disable PCoIP logs successfully'
-        if cls.items[7][1] == '[*]':
+        if cls.items[9][1] == '[*]':
             log_flags['MKS'] = True
             print 'Enable MKS logs successfully'
         else:
@@ -232,8 +254,16 @@ class BlastUDPMenu(ViewMenu):
 
 def create_dynamic_menu_items(machines):
     items = [['Machines','Selection',''],]
-    for index,machine_alias_name in enumerate(machines):
-        items.append(['%d.  %s' % (index+1, machine_alias_name),'[ ]','update'])
+    sorted_keys = machines.keys()
+    sorted_keys.sort()
+    for index,key in enumerate(sorted_keys):
+        items.append(['%d.  %s' % (index+1, key),'[ ]','update'])
+    return items
+
+def create_dynamic_menu_items_without_index(machines):
+    items = [['Machines','Selection',''],]
+    for machine_alias_name in machines:
+        items.append([machine_alias_name,'[ ]','update'])
     return items
 
 # Menu 4
@@ -272,7 +302,8 @@ class AgentReinstallMenu(EditMenu):
                 machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
                 machine_ip = config.ViewAgentHost_All[machine_alias_name]
                 selected_machine.append(machine_ip)
-        application.reinstall_agent(tuple(selected_machine))
+        if selected_machine:
+            application.reinstall_agent(tuple(selected_machine))
 
     @classmethod
     def on_quit(cls):
@@ -314,7 +345,8 @@ class ClientReinstallMenu(EditMenu):
                 machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
                 machine_ip = config.ViewClientHost_All[machine_alias_name]
                 selected_machine.append(machine_ip)
-        application.reinstall_client(tuple(selected_machine))
+        if selected_machine:
+            application.reinstall_client(tuple(selected_machine))
 
     @classmethod
     def on_quit(cls):
@@ -357,16 +389,132 @@ class BrokerReinstallMenu(EditMenu):
                 machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
                 machine_ip = config.ViewBrokerHost_All[machine_alias_name]
                 selected_machine.append(machine_ip)
-        application.reinstall_broker(tuple(selected_machine))
+        if selected_machine:
+            application.reinstall_broker(tuple(selected_machine))
 
     @classmethod
     def on_quit(cls):
         sys.exit()
 
+# Menu 7
+class RebootMachineMenu(EditMenu):
+    items = []
+    items_broker = create_dynamic_menu_items_without_index(config.ViewBrokerHost_All)[1:]
+    items_agent = create_dynamic_menu_items_without_index(config.ViewAgentHost_All)[1:]
+    items_client = create_dynamic_menu_items_without_index(config.ViewClientHost_All)[1:]
+    sorted_items = items_broker + items_agent + items_client
+    sorted_items.sort(cmp=lambda x,y: cmp(x[0],y[0]))
+    items.append(['Machines','Selection',''])
+    for index,item in enumerate(sorted_items):
+        item[0] = '%d.  ' % (index+1) + item[0]
+        items.append(item)
+    raw_input_choices = ['ok','a','!','<','n'] + [str(num) for num in range(1,len(items))]
+    @classmethod
+    def update(cls,index):
+        if cls.items[index][1] == '[ ]':
+            cls.items[index][1] = '[*]'
+        else:
+            cls.items[index][1] = '[ ]'
+        Frame.exec_menu('RebootMachineMenu')
+    @classmethod
+    def on_all(cls):
+        all_true = True
+        for Caption,Value,Func in cls.items[1:]:
+            if Value == '[ ]':
+                all_true = False
+        if all_true:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[ ]'
+        else:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[*]'
+        Frame.exec_menu('RebootMachineMenu')
+    @classmethod
+    def on_back(cls):
+        Frame.exec_menu('MainMenu')
+
+    @classmethod
+    def on_ok(cls):
+        selected_machine = []
+        machine_ip = []
+        for item in cls.items:
+            if item[1] == '[*]':
+                machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
+                if machine_alias_name in config.ViewBrokerHost_All:
+                    machine_ip = config.ViewBrokerHost_All[machine_alias_name]
+                if machine_alias_name in config.ViewAgentHost_All:
+                    machine_ip = config.ViewAgentHost_All[machine_alias_name]
+                if machine_alias_name in config.ViewClientHost_All:
+                    machine_ip = config.ViewClientHost_All[machine_alias_name]
+                selected_machine.append(machine_ip)
+        if selected_machine:
+            application.reboot_machine(tuple(selected_machine))
+
+    @classmethod
+    def on_quit(cls):
+        sys.exit()
+
+# Menu 8
+class UpdateAutoToolMenu(EditMenu):
+    items = []
+    items_broker = create_dynamic_menu_items_without_index(config.ViewBrokerHost_All)[1:]
+    items_agent = create_dynamic_menu_items_without_index(config.ViewAgentHost_All)[1:]
+    items_client = create_dynamic_menu_items_without_index(config.ViewClientHost_All)[1:]
+    sorted_items = items_broker + items_agent + items_client
+    sorted_items.sort(cmp=lambda x,y: cmp(x[0],y[0]))
+    items.append(['Machines','Selection',''])
+    for index,item in enumerate(sorted_items):
+        item[0] = '%d.  ' % (index+1) + item[0]
+        items.append(item)
+    raw_input_choices = ['ok','a','!','<','n'] + [str(num) for num in range(1,len(items))]
+    @classmethod
+    def update(cls,index):
+        if cls.items[index][1] == '[ ]':
+            cls.items[index][1] = '[*]'
+        else:
+            cls.items[index][1] = '[ ]'
+        Frame.exec_menu('UpdateAutoToolMenu')
+    @classmethod
+    def on_all(cls):
+        all_true = True
+        for Caption,Value,Func in cls.items[1:]:
+            if Value == '[ ]':
+                all_true = False
+        if all_true:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[ ]'
+        else:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[*]'
+        Frame.exec_menu('UpdateAutoToolMenu')
+    @classmethod
+    def on_back(cls):
+        Frame.exec_menu('MainMenu')
+
+    @classmethod
+    def on_ok(cls):
+        selected_machine = []
+        machine_ip = []
+        for item in cls.items:
+            if item[1] == '[*]':
+                machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
+                if machine_alias_name in config.ViewBrokerHost_All:
+                    machine_ip = config.ViewBrokerHost_All[machine_alias_name]
+                if machine_alias_name in config.ViewAgentHost_All:
+                    machine_ip = config.ViewAgentHost_All[machine_alias_name]
+                if machine_alias_name in config.ViewClientHost_All:
+                    machine_ip = config.ViewClientHost_All[machine_alias_name]
+                selected_machine.append(machine_ip)
+        if selected_machine:
+            application.update_autotool(tuple(selected_machine))
+
+    @classmethod
+    def on_quit(cls):
+        sys.exit()
 
 class Frame(object):
     width = 75
-    max_items_in_one_page = 10
+    max_items_in_one_page = 9
     curr_menu = None
     curr_menu_choices =None
     total_items = 0
@@ -427,7 +575,7 @@ class Frame(object):
             os.system('clear')
         menu = globals()[menu_class_name]
         cls.total_items = len(menu.items)
-        cls.total_pages = cls.total_items/cls.max_items_in_one_page + 1
+        cls.total_pages = (cls.total_items-1)/cls.max_items_in_one_page + (0 if (cls.total_items-1) % cls.max_items_in_one_page == 0 else 1)
         cls.curr_menu = menu
         cls.curr_menu_choices = menu.raw_input_choices
         cls.print_title()
