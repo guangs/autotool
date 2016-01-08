@@ -1,6 +1,7 @@
 #Video Tutorials
 1. Demo basic functions [https://youtu.be/3ezQ9-MV0Kk](https://youtu.be/3ezQ9-MV0Kk)  
 2. How to configure autotool? Not ready yet  
+
 #Introduction
 This tool is designed for VMware View Team. Currently it only supports Windows platform, so it supports view windows broker, windows client and windows agent. However, Mac client and Linux client can also use some functions related to windows VDI, such as "Reinstall View Agent Build" and so forth.   
 Here are the basic functions available by now:  
