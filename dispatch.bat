@@ -9,7 +9,7 @@ set pythoninstaller=python-2.7.8.msi
 
 if not exist "C:\Python27" (
 echo "installing python27 ..., please wait"
-msiexec /i \\sanya.eng.vmware.com\Exchange\gshi\automation\%pythoninstaller% /qn ADDLOCAL=ALL
+msiexec /i \\10.117.47.199\Exchange\gshi\automation\%pythoninstaller% /qn ADDLOCAL=ALL
 )
 
 sc query Autotool
@@ -18,7 +18,7 @@ if %errorlevel%==0 (
   ping 127.0.0.1 -n 3
   c:\autotool\presoftware\nssm-2.24\win%OSbit%\nssm.exe remove Autotool confirm
 )
-xcopy /s /e /i /y \\sanya.eng.vmware.com\Exchange\gshi\automation\autotool c:\autotool
+xcopy /s /e /i /y \\10.117.47.199\Exchange\gshi\automation\autotool c:\autotool
 c:\autotool\presoftware\nssm-2.24\win%OSbit%\nssm.exe install Autotool "c:\autotool\bin\startserver.bat"
 c:\autotool\presoftware\nssm-2.24\win%OSbit%\nssm.exe set Autotool Type SERVICE_WIN32_OWN_PROCESS
 ::c:\autotool\presoftware\nssm-2.24\win%OSbit%\nssm.exe set Autotool ObjectName .\Administrator ca$hc0w

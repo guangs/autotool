@@ -45,6 +45,13 @@ def agent_uninstall():
 
 
 def agent_install(branch,buildid,latest,kind,buildtype,ipversion,rds,broker):
+    #install driver certification for USB
+    current_dir = os.path.abspath('.')
+    base_dir = os.sep.join(current_dir.split(os.sep)[:-1])
+    res_dir = os.path.join(base_dir,'res')
+    view_agent_usb_cer_file = os.path.join(res_dir,'ViewAgentUSB.cer')
+    # you can use certmgr.msc to check it
+    os.system('certutil -addstore "TrustedPublisher" {}'.format(view_agent_usb_cer_file))
     #install new build
     if latest == 'true':
         buildid = ''
@@ -61,7 +68,7 @@ def client_reinstall(branch,buildid,latest,kind,buildtype,ipversion):
         viewclient.uninstall()
         if latest == 'true':
             buildid = ''
-        viewclient.install('viewcrt',branch,buildtype,buildid,kind,ipversion)
+        viewclient.install('viewclientwin',branch,buildtype,buildid,kind,ipversion)
         #restart system
         windows.delay_reboot(5)
     t = threading.Thread(target=reinstall,args=(branch,buildid,latest,kind,buildtype,ipversion))

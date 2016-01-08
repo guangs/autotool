@@ -283,7 +283,7 @@ def enableBlastTCP(role_name,addr='localhost:9180',expectStatus =200):
         raise ServiceException('unknown status')
 
 def upgradeAutotool(addr='localhost:9180',expectStatus =200,role_name='view_client'):
-    bat_command = r"net use y: \\sanya.eng.vmware.com\exchange\gshi /user:sanya\gshi vmware;ping 127.0.0.1 -n 10;y:\automation\autotool\dispatch.bat;net use /delete y:;ping 127.0.0.1 -n 10"
+    bat_command = r"net use y: \\10.117.47.199\exchange\gshi /user:sanya\gshi vmware;ping 127.0.0.1 -n 10;y:\automation\autotool\dispatch.bat;net use /delete y:;ping 127.0.0.1 -n 10"
     json_postmsg = CommandRequestJSON % (bat_command, 'bat', role_name)
     site = tuple(addr.split(':'))
     res = common.PostMessage(site,CmdURL,json_postmsg)
@@ -330,7 +330,10 @@ def reinstallAgent(addr='localhost:9180',expectStatus =200):
     buildtype = installationproperties.agent_buildtype
     ipversion = installationproperties.agent_ipversion
     rds = 'false'
-    broker = config.ViewBrokerHost
+    if isinstance(config.ViewBrokerHost,str):
+        broker = config.ViewBrokerHost
+    else: # for broker list
+        broker = config.ViewBrokerHost[0]
     json_postmsg = InstallRequestJSON % ('reinstall', 'agent', branch, buildid, latest, kind, buildtype, ipversion, rds, broker)
     site = tuple(addr.split(':'))
     res = common.PostMessage(site,InstallURL,json_postmsg)

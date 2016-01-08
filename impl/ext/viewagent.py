@@ -37,7 +37,7 @@ def install(product='view',branch='view15h2',buildtype='release',buildid='',kind
     """ Install the MSI. """
     # Now download the latest view agent build
     installer_path = download_viewclient_installer(product,branch,buildtype,buildid,kind)
-
+    
     # run the installer
     print ">>> Starting viewclient installer"
     #
@@ -49,6 +49,8 @@ def install(product='view',branch='view15h2',buildtype='release',buildid='',kind
     #                                                       V
     #msi_v_args = '"/qn /l* ""%s"" REBOOT=""ReallySuppress"" "' % \
     #             os.path.join(os.path.dirname(installer_path), 'viewclient-inst.log')
+    # ADDLOCAL=VmVideo,RTAV,SVIAgent,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,BlastProtocol,ClientDriveRedirection,PCoIP,UnityTouch,FLASHMMR
+
     if ipversion == 'ipv6':
         IP_Protocol = 'IPv6'
     else:
@@ -57,11 +59,16 @@ def install(product='view',branch='view15h2',buildtype='release',buildid='',kind
     import socket
     domain_name = socket.getfqdn().replace(socket.gethostname()+'.', '')
     broker_username = domain_name + '\\' + 'administrator'
-    if rds:
-        msi_v_args = '"/qn VDM_SERVER_NAME=%s VDM_SERVER_USERNAME=%s VDM_SERVER_PASSWORD=%s VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % (brokerIP,broker_username,brokerPassword,IP_Protocol)
+    if ipversion == 'ipv6':
+        selected_components = 'Core,PCoIP,BlastProtocol,RDP,ThinPrint,USB'
     else:
-        msi_v_args = '"/qn VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % IP_Protocol
-                 
+        selected_components = 'VmVideo,RTAV,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,BlastProtocol,ClientDriveRedirection,PCoIP,UnityTouch,FLASHMMR'
+
+    if rds:
+        msi_v_args = '"/qn ADDLOCAL=%s VDM_SERVER_NAME=%s VDM_SERVER_USERNAME=%s VDM_SERVER_PASSWORD=%s VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % (selected_components,brokerIP,broker_username,brokerPassword,IP_Protocol)
+    else:
+        msi_v_args = '"/qn ADDLOCAL=%s VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % (selected_components,IP_Protocol)
+
     cmd_and_args = [
         installer_path,
         '/s', # MSI slient install

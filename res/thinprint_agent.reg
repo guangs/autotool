@@ -16,6 +16,22 @@ Windows Registry Editor Version 5.00
 "DebugLevel"=dword:0000001f
 "DebugFile"="C:\\Temp\\TPView.log"
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPAutoConnect]
+"DebugLevel"=dword:000000ff
+"DebugFile"="C:\\Temp\\TPAutoConnect.log"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPPrn]
+"DebugLevel"=dword:000000ff
+"DebugFile"="C:\\Temp\\TPPrn.log"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPVCGateway]
+"DebugLevel"=dword:0000000f
+"DebugFile"="C:\\Temp\\TPVCGateway.log"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\ThinPrint\TPWinPrn]
+"DebugLevel"=dword:000000ff
+"DebugFile"="C:\\Temp\\TPWinPrn.log"
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ThinPrint\TPClnRdp]
 "DebugFile"="C:\\Temp\\TPClnRdp_6432.log"
 "DebugLevel"=dword:000007
