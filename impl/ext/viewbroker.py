@@ -111,6 +111,19 @@ def uninstall():
         installed_id = get_installed_id("Connection Server")
         subprocess.call('msiexec /norestart /q/x%s REMOVE=ALL' % installed_id,shell=True)
 
+
+def get_build_version():
+    try:
+        output = subprocess.check_output('wmic product get name,version,installdate | find "Connection Server"',shell=True)
+        if "Connection Server" in output:
+            version = output.strip().split(' ')[-1]
+            installdate = output.strip().split(' ')[0]
+            return version, installdate
+        else:
+            return 'NA', 'NA'
+    except:
+        return 'NA', 'NA'
+
 if __name__ == '__main__':
     install()
     pass

@@ -1,4 +1,4 @@
-# 'view-server-main', 'view15h2'
+# 'view-server-main', 'view16h1'
 agent_branch = 'view-server-main'
 # '3005627' or some specific build number
 agent_buildid = ''
@@ -16,7 +16,7 @@ agent_ipversion = 'ipv4'
 
 
 
-# 'crt-main','crt-15q3'
+# 'crt-main','crt-16q1'
 client_branch = 'crt-main'
 # '3005627' or some specific build number
 client_buildid = ''

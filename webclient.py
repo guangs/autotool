@@ -17,6 +17,7 @@ RegistryURL = '/rest/registry'
 LoggingURL = '/rest/logging'
 CmdURL = '/rest/cmd'
 InstallURL = '/rest/install'
+BuildInfoURL = '/rest/buildinfo'
 
 SetRegistryRequestJSON = '''
 {
@@ -83,6 +84,16 @@ InstallRequestJSON = '''{
         "broker": "%s"
     }
 }'''
+
+# role:client,agent,broker
+BuildInfoRequestJSON = '''{
+  "request": {
+    "role": "%s",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}'''
+
 
 logger = logging.getLogger('autotool')
 
@@ -283,7 +294,7 @@ def enableBlastTCP(role_name,addr='localhost:9180',expectStatus =200):
         raise ServiceException('unknown status')
 
 def upgradeAutotool(addr='localhost:9180',expectStatus =200,role_name='view_client'):
-    bat_command = r"net use y: \\10.117.47.199\exchange\gshi /user:sanya\gshi vmware;ping 127.0.0.1 -n 10;y:\automation\autotool\dispatch.bat;net use /delete y:;ping 127.0.0.1 -n 10"
+    bat_command = r"net use y: \\sanya.eng.vmware.com\exchange\gshi /user:sanya\gshi vmware;ping 127.0.0.1 -n 10;y:\automation\autotool\dispatch.bat;net use /delete y:;ping 127.0.0.1 -n 10"
     json_postmsg = CommandRequestJSON % (bat_command, 'bat', role_name)
     site = tuple(addr.split(':'))
     res = common.PostMessage(site,CmdURL,json_postmsg)
@@ -407,6 +418,27 @@ def reinstallBroker(addr='localhost:9180',expectStatus =200):
         raise ServiceException(description)
     else:
         raise ServiceException('unknown status')
+
+
+def getBuildInfo(role_name,addr='localhost:9180',expectStatus =200):
+    json_postmsg = BuildInfoRequestJSON % role_name
+    site = tuple(addr.split(':'))
+    res = common.PostMessage(site,BuildInfoURL,json_postmsg)
+    if not res:
+        raise ServiceException('no response')
+    value = res['ResponseBody']
+    http_status = res['ResponseStatus']
+    status = value['response']['status']
+    if http_status != expectStatus:
+        raise ServiceException('error http status code')
+    if status == 'OK':
+        role = value['response']['role']
+        build_version = value['response']['build_version']
+        build_installdate = value['response']['build_installdate']
+        return build_installdate, role, build_version
+    else:
+        return "NA", "NA", "NA"
+
 
 if __name__ == '__main__':
     'to test it'

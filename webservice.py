@@ -14,11 +14,15 @@ import os
 import urllib
 from impl import *
 import threading
+import impl.ext.viewagent as viewagent
+import impl.ext.viewclient as viewclient
+import impl.ext.viewbroker as viewbroker
 
 urls = ('/rest/registry/?', 'RegistryService',
         '/rest/logging','LoggingService',
         '/rest/cmd','CommandService',
         '/rest/install','InstallService',
+        '/rest/buildinfo','BuildInfoService'
        )
 SetRegistryResponseJSON = '{"registry":{"status":"OK"}}'
 SetRegistryResponseJSON_Error = '{"registry":{"status":"Error"}}'
@@ -65,6 +69,25 @@ InstallResponseJSON_Error = '''{
     "description": "%s"
   }
 }'''
+
+BuildInfoResponseJSON = '''{
+  "response": {
+    "role": "%s",
+    "build_version": "%s",
+    "build_installdate": "%s",
+    "status": "OK"
+  }
+}'''
+
+BuildInfoResponseJSON_Error = '''{
+  "response": {
+    "status": "Error",
+    "description": "%s"
+  }
+}'''
+
+
+buildinfo = {'client': 'NA', 'agent': 'NA', 'broker': 'NA'}
 
 class RegistryService(object):
     def GET(self):
@@ -272,6 +295,49 @@ class InstallService(object):
             print 'there is error'
             return InstallResponseJSON_Error % 'there is AttributeError'
 
+
+class BuildInfoService(object):
+
+    def POST(self):
+        global buildinfo
+        try:
+            web.header('Content-Type', 'application/json')
+            body = web.data().strip()
+            print body
+            msgobj = eval(body)
+            if 'request' in msgobj.keys():
+                request = msgobj['request']
+                role = request['role']
+                if role == 'client':
+                    if buildinfo['client'] != 'NA':
+                        build_version, build_installdate = buildinfo['client']
+                    else:
+                        build_version, build_installdate = viewclient.get_build_version()
+                        buildinfo['client'] = (build_version, build_installdate)
+                    return BuildInfoResponseJSON % ('client',build_version,build_installdate)
+                elif role == 'agent':
+                    if buildinfo['agent'] != 'NA':
+                        build_version, build_installdate = buildinfo['agent']
+                    else:
+                        build_version, build_installdate = viewagent.get_build_version()
+                        buildinfo['agent'] = (build_version, build_installdate)
+                    return BuildInfoResponseJSON % ('agent',build_version,build_installdate)
+                elif role == 'broker':
+                    if buildinfo['broker'] != 'NA':
+                        build_version, build_installdate = buildinfo['broker']
+                    else:
+                        build_version, build_installdate = viewbroker.get_build_version()
+                        buildinfo['broker'] = (build_version, build_installdate)
+                    return BuildInfoResponseJSON % ('broker',build_version,build_installdate)
+                else:
+                    return BuildInfoResponseJSON_Error % 'not support role'
+            else:
+                return BuildInfoResponseJSON_Error % 'not support'
+        except AttributeError:
+            print 'there is error'
+            return BuildInfoResponseJSON_Error % 'there is AttributeError'
+
+
 def start_web_services():
     # start log transfer server in sub thread
     logtransfer.start_server()
@@ -285,9 +351,28 @@ def handle_reboot_after_tasks():
         return
     with open('C:\\Temp\\reboot_after_tasks.txt', 'r') as f:
         tasks = f.readlines()
+    os.remove('C:\\Temp\\reboot_after_tasks.txt')
     for task in tasks:
         exec('''%s''' % task)
-    os.remove('C:\\Temp\\reboot_after_tasks.txt')
+    collect_build_info_after_started()
+
+
+def collect_build_info_after_started():
+    import webclient
+    # import time
+    # time.sleep(15)
+    try:
+        webclient.getBuildInfo('client')
+    except webclient.ServiceException,e:
+        print 'getting client build info failed with description<' + e.value + '>, please retry'
+    try:
+        webclient.getBuildInfo('broker')
+    except webclient.ServiceException,e:
+        print 'getting broker build info failed with description<' + e.value + '>, please retry'
+    try:
+        webclient.getBuildInfo('agent')
+    except webclient.ServiceException,e:
+        print 'getting agent build info failed with description<' + e.value + '>, please retry'
 
 
 def create_tempdir():
@@ -299,4 +384,7 @@ if __name__ == "__main__":
     t = threading.Thread(target=handle_reboot_after_tasks)
     # t.setDaemon(True)
     t.start()
+    # t2 = threading.Thread(target=collect_build_info_after_started)
+    # t2.setDaemon(True)
+    # t2.start()
     start_web_services()

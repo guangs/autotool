@@ -135,6 +135,7 @@ def enable_configured_logs():
 def start_capture_logs():
     client_log_dirs = logging_properties.LogDirs['client']
     agent_log_dirs = logging_properties.LogDirs['agent']
+    broker_log_dirs = logging_properties.LogDirs['broker']
     filefilter = r'.*'
     dst_dir = 'C:\\vdm-sdct-auto'
     threads = []
@@ -157,6 +158,12 @@ def start_capture_logs():
             threads.append(t)
             #time.sleep(0.2)
             # webclient.startCaptureLog(log_dir,filefilter,dst_dir,5,300,AGENT_HOST+':'+str(PORT),200)
+    for BROKER_HOST in BROKER_HOSTS:
+        for log_dir in broker_log_dirs:
+            t = MyThread(target=webclient.startCaptureLog,args=(log_dir,filefilter,dst_dir,5,300,BROKER_HOST+':'+str(PORT),200))
+            t.setDaemon(True)
+            t.start()
+            threads.append(t)
     time.sleep(0.2)
     for t in threads:
         t.join()
@@ -172,6 +179,7 @@ def start_capture_logs():
 def stop_capture_logs():
     client_log_dirs = logging_properties.LogDirs['client']
     agent_log_dirs = logging_properties.LogDirs['agent']
+    broker_log_dirs = logging_properties.LogDirs['broker']
     current_user = getpass.getuser()
     local_savelog_root_dir= ''
     if locals().has_key("SaveLogsDirectory"):
@@ -201,6 +209,14 @@ def stop_capture_logs():
             if not os.path.exists(local_savelog_sub_dir_agent):
                 os.makedirs(local_savelog_sub_dir_agent)
             webclient.getZipLogs(local_savelog_sub_dir_agent,dst_dir,AGENT_HOST,Log_Transfer_PORT)
+        for BROKER_HOST in BROKER_HOSTS:
+            for log_dir in broker_log_dirs:
+                webclient.stopCaptureLog(log_dir,filefilter,dst_dir,BROKER_HOST+':'+str(PORT),200)
+            webclient.zipLogs(dst_dir,BROKER_HOST+':'+str(PORT),200)
+            local_savelog_sub_dir_agent = os.path.join(local_savelog_sub_dir,'broker' + '(' + BROKER_HOST + ')')
+            if not os.path.exists(local_savelog_sub_dir_agent):
+                os.makedirs(local_savelog_sub_dir_agent)
+            webclient.getZipLogs(local_savelog_sub_dir_agent,dst_dir,BROKER_HOST,Log_Transfer_PORT)
         print 'stop capture logs successfully'
     except webclient.CaptureLogException,e:
         print 'stop capture logs failed with description<' + e.value + '>, please retry'
@@ -272,6 +288,45 @@ def reboot_machine(selected_machines):
         print 'reboot machine successfully'
     except webclient.ServiceException,e:
         print 'reboot machine failed with description<' + e.value + '>, please retry'
+
+
+def get_agent_buildinfo(selected_machines):
+    try:
+        _print_buildinfotitle()
+        for host_alias,host_ip in selected_machines.items():
+            build_installdate, role, build_version = webclient.getBuildInfo('agent',host_ip+':'+str(PORT))
+            _print_buildinfo(host_alias,build_installdate, role, build_version)
+    except webclient.ServiceException,e:
+        print 'getting agent build info failed with description<' + e.value + '>, please retry'
+
+
+def get_client_buildinfo(selected_machines):
+    try:
+        _print_buildinfotitle()
+        for host_alias,host_ip in selected_machines.items():
+            build_installdate, role, build_version = webclient.getBuildInfo('client',host_ip+':'+str(PORT))
+            _print_buildinfo(host_alias,build_installdate, role, build_version)
+    except webclient.ServiceException,e:
+        print 'getting agent build info failed with description<' + e.value + '>, please retry'
+
+
+def get_broker_buildinfo(selected_machines):
+    try:
+        _print_buildinfotitle()
+        for host_alias,host_ip in selected_machines.items():
+            build_installdate, role, build_version = webclient.getBuildInfo('broker',host_ip+':'+str(PORT))
+            _print_buildinfo(host_alias,build_installdate, role, build_version)
+    except webclient.ServiceException,e:
+        print 'getting agent build info failed with description<' + e.value + '>, please retry'
+
+
+def _print_buildinfo(host_alias,build_installdate, role, build_version):
+    print host_alias.ljust(20)[:20] + '----' + role.center(17) + '----' + build_version.center(15) + '----' + build_installdate.rjust(15)[-15:]
+
+
+def _print_buildinfotitle():
+    print 'Machine Alias Name'.ljust(20) + '    ' + 'View Role'.center(17) + '    ' + 'Build Version'.center(15) + '    ' + 'Install Date'.rjust(15)[-15:]
+
 
 if __name__ == '__main__':
     enable_configured_logs()

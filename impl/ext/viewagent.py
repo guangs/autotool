@@ -8,7 +8,7 @@ import urlparse
 import subprocess
 import tempfile
 import buildweb
-
+import re
 
 INSTALL_PARAMS = [
 ]
@@ -88,8 +88,8 @@ def install(product='view',branch='view15h2',buildtype='release',buildid='',kind
 
 def view_agent_installed():
     try:
-        output = subprocess.check_output('wmic product get name | find "VMware Horizon View Agent"',shell=True)
-        if "VMware Horizon View Agent" in output:
+        output = subprocess.check_output('wmic product get name | find "Horizon Agent"',shell=True)
+        if "Horizon Agent" in output:
             return True
         else:
             return False
@@ -97,8 +97,8 @@ def view_agent_installed():
         return False
 
 def get_installed_id():
-    output = subprocess.check_output('wmic product get IdentifyingNumber,name |find "VMware Horizon View Agent"',shell=True)
-    if "VMware Horizon View Agent" in output:
+    output = subprocess.check_output('wmic product get IdentifyingNumber,name |find "Horizon Agent"',shell=True)
+    if "Horizon Agent" in output:
         return output.split(' ')[0]
 
 
@@ -106,6 +106,20 @@ def uninstall():
     if view_agent_installed():
         installed_id = get_installed_id()
         subprocess.call('msiexec /norestart /q/x%s REMOVE=ALL' % installed_id,shell=True)
+
+
+def get_build_version():
+    try:
+        output = subprocess.check_output('wmic product get name,version,installdate | find "Horizon Agent"',shell=True)
+        if "Horizon Agent" in output:
+            version = output.strip().split(' ')[-1]
+            installdate = output.strip().split(' ')[0]
+            return version, installdate
+        else:
+            return 'NA', 'NA'
+    except:
+        return 'NA', 'NA'
+
 
 if __name__ == '__main__':
     install()

@@ -53,23 +53,19 @@ class MainMenu(ViewMenu):
              ('4.  Reinstall View Agent Build','','menu4'),
              ('5.  Reinstall View Client Build','','menu5'),
              ('6.  Reinstall View Broker Build','','menu6'),
-             ('7.  Reboot Windows Machines','','menu7'),
-             ('8.  Activate Local Windows OS','','menu8'),
-             ('9.  Upgrade AutoTool','','menu9'),
-             ('10. <Uninstall Client Build>','','menux'),
-             ('11. <Uninstall Agent Build>','','menux'),
-             ('12. <Uninstall Broker Build>','','menux'),
-             ('13. <Install Client Build>','','menux'),
-             ('14. <Install Agent Build>','','menux'),
-             ('15. <Install Broker Build>','','menux'),
-             ('16. <Install .Net Framework>','','menux'),
-             ('17. <Install Java>','','menux'),
-             ('18. <Install Printers>','','menux'),
-             ('19. <Install Microsoft Office>','','menux'),
-             ('20. <Install Windows Update>','','menux'),
-             ('21. <Create New VM on ESX Host>','','menux'),
-             ('22. <Get Current Build Number>','','menux'),
-             ('23. <Configure Automation>','','menux'),]
+             ('7.  Get View Agent Build Info','','menu7'),
+             ('8.  Get View Client Build Info','','menu8'),
+             ('9.  Get View Broker Build Info','','menu9'),
+             ('10. Reboot Windows Machines','','menu10'),
+             ('11. Activate Local Windows OS','','menu11'),
+             ('12. Upgrade AutoTool','','menu12'),
+             ('13. <Install .Net Framework>','','menux'),
+             ('14. <Install Java>','','menux'),
+             ('15. <Install Printers>','','menux'),
+             ('16. <Install Microsoft Office>','','menux'),
+             ('17. <Install Windows Update>','','menux'),
+             ('18. <Create New VM on ESX Host>','','menux'),
+             ('19. <Configure Automation>','','menux'),]
     raw_input_choices = ['!','<','n'] + [str(num) for num in range(1,len(items))]
     @classmethod
     def menu1(cls):
@@ -94,13 +90,22 @@ class MainMenu(ViewMenu):
         Frame.exec_menu('BrokerReinstallMenu')
     @classmethod
     def menu7(cls):
-        Frame.exec_menu('RebootMachineMenu')
+        Frame.exec_menu('AgentBuildInfoMenu')
     @classmethod
     def menu8(cls):
+        Frame.exec_menu('ClientBuildInfoMenu')
+    @classmethod
+    def menu9(cls):
+        Frame.exec_menu('BrokerBuildInfoMenu')
+    @classmethod
+    def menu10(cls):
+        Frame.exec_menu('RebootMachineMenu')
+    @classmethod
+    def menu11(cls):
         import subprocess
         subprocess.call('start C:\\autotool\\scripts\\Microsoft_KMS-MAK_activation.bat',shell=True)
     @classmethod
-    def menu9(cls):
+    def menu12(cls):
         Frame.exec_menu('UpdateAutoToolMenu')
     @classmethod
     def menux(cls):
@@ -299,7 +304,7 @@ class AgentReinstallMenu(EditMenu):
         selected_machine = []
         for item in cls.items:
             if item[1] == '[*]':
-                machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
+                machine_alias_name = re.findall(r'\d+\.\s\s*(.*)',item[0])[0]
                 machine_ip = config.ViewAgentHost_All[machine_alias_name]
                 selected_machine.append(machine_ip)
         if selected_machine:
@@ -342,7 +347,7 @@ class ClientReinstallMenu(EditMenu):
         selected_machine = []
         for item in cls.items:
             if item[1] == '[*]':
-                machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
+                machine_alias_name = re.findall(r'\d+\.\s\s*(.*)',item[0])[0]
                 machine_ip = config.ViewClientHost_All[machine_alias_name]
                 selected_machine.append(machine_ip)
         if selected_machine:
@@ -386,7 +391,7 @@ class BrokerReinstallMenu(EditMenu):
         selected_machine = []
         for item in cls.items:
             if item[1] == '[*]':
-                machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
+                machine_alias_name = re.findall(r'\d+\.\s\s*(.*)',item[0])[0]
                 machine_ip = config.ViewBrokerHost_All[machine_alias_name]
                 selected_machine.append(machine_ip)
         if selected_machine:
@@ -406,7 +411,10 @@ class RebootMachineMenu(EditMenu):
     sorted_items.sort(cmp=lambda x,y: cmp(x[0],y[0]))
     items.append(['Machines','Selection',''])
     for index,item in enumerate(sorted_items):
-        item[0] = '%d.  ' % (index+1) + item[0]
+        if index < 9:
+            item[0] = '%d.  ' % (index+1) + item[0]
+        else:
+            item[0] = '%d. ' % (index+1) + item[0]
         items.append(item)
     raw_input_choices = ['ok','a','!','<','n'] + [str(num) for num in range(1,len(items))]
     @classmethod
@@ -439,7 +447,7 @@ class RebootMachineMenu(EditMenu):
         machine_ip = []
         for item in cls.items:
             if item[1] == '[*]':
-                machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
+                machine_alias_name = re.findall(r'\d+\.\s\s*(.*)',item[0])[0]
                 if machine_alias_name in config.ViewBrokerHost_All:
                     machine_ip = config.ViewBrokerHost_All[machine_alias_name]
                 if machine_alias_name in config.ViewAgentHost_All:
@@ -454,7 +462,7 @@ class RebootMachineMenu(EditMenu):
     def on_quit(cls):
         sys.exit()
 
-# Menu 8
+# Menu 9
 class UpdateAutoToolMenu(EditMenu):
     items = []
     items_broker = create_dynamic_menu_items_without_index(config.ViewBrokerHost_All)[1:]
@@ -464,7 +472,10 @@ class UpdateAutoToolMenu(EditMenu):
     sorted_items.sort(cmp=lambda x,y: cmp(x[0],y[0]))
     items.append(['Machines','Selection',''])
     for index,item in enumerate(sorted_items):
-        item[0] = '%d.  ' % (index+1) + item[0]
+        if index < 9:
+            item[0] = '%d.  ' % (index+1) + item[0]
+        else:
+            item[0] = '%d. ' % (index+1) + item[0]
         items.append(item)
     raw_input_choices = ['ok','a','!','<','n'] + [str(num) for num in range(1,len(items))]
     @classmethod
@@ -497,7 +508,7 @@ class UpdateAutoToolMenu(EditMenu):
         machine_ip = []
         for item in cls.items:
             if item[1] == '[*]':
-                machine_alias_name = re.findall(r'\d\.\s\s(.*)',item[0])[0]
+                machine_alias_name = re.findall(r'\d+\.\s\s*(.*)',item[0])[0]
                 if machine_alias_name in config.ViewBrokerHost_All:
                     machine_ip = config.ViewBrokerHost_All[machine_alias_name]
                 if machine_alias_name in config.ViewAgentHost_All:
@@ -512,9 +523,142 @@ class UpdateAutoToolMenu(EditMenu):
     def on_quit(cls):
         sys.exit()
 
+
+# Menu 10
+class AgentBuildInfoMenu(EditMenu):
+    items = create_dynamic_menu_items(config.ViewAgentHost_All)
+    raw_input_choices = ['ok','a','!','<','n'] + [str(num) for num in range(1,len(items))]
+    @classmethod
+    def update(cls,index):
+        if cls.items[index][1] == '[ ]':
+            cls.items[index][1] = '[*]'
+        else:
+            cls.items[index][1] = '[ ]'
+        Frame.exec_menu('AgentBuildInfoMenu')
+    @classmethod
+    def on_all(cls):
+        all_true = True
+        for Caption,Value,Func in cls.items[1:]:
+            if Value == '[ ]':
+                all_true = False
+        if all_true:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[ ]'
+        else:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[*]'
+        Frame.exec_menu('AgentBuildInfoMenu')
+    @classmethod
+    def on_back(cls):
+        Frame.exec_menu('MainMenu')
+
+    @classmethod
+    def on_ok(cls):
+        selected_machines = {}
+        for item in cls.items:
+            if item[1] == '[*]':
+                machine_alias_name = re.findall(r'\d+\.\s\s*(.*)',item[0])[0]
+                machine_ip = config.ViewAgentHost_All[machine_alias_name]
+                selected_machines[machine_alias_name] = machine_ip
+        if selected_machines:
+            application.get_agent_buildinfo(selected_machines)
+
+    @classmethod
+    def on_quit(cls):
+        sys.exit()
+
+
+# Menu 11
+class ClientBuildInfoMenu(EditMenu):
+    items = create_dynamic_menu_items(config.ViewClientHost_All)
+    raw_input_choices = ['ok','a','!','<','n'] + [str(num) for num in range(1,len(items))]
+    @classmethod
+    def update(cls,index):
+        if cls.items[index][1] == '[ ]':
+            cls.items[index][1] = '[*]'
+        else:
+            cls.items[index][1] = '[ ]'
+        Frame.exec_menu('ClientBuildInfoMenu')
+    @classmethod
+    def on_all(cls):
+        all_true = True
+        for Caption,Value,Func in cls.items[1:]:
+            if Value == '[ ]':
+                all_true = False
+        if all_true:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[ ]'
+        else:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[*]'
+        Frame.exec_menu('ClientBuildInfoMenu')
+    @classmethod
+    def on_back(cls):
+        Frame.exec_menu('MainMenu')
+
+    @classmethod
+    def on_ok(cls):
+        selected_machines = {}
+        for item in cls.items:
+            if item[1] == '[*]':
+                machine_alias_name = re.findall(r'\d+\.\s\s*(.*)',item[0])[0]
+                machine_ip = config.ViewClientHost_All[machine_alias_name]
+                selected_machines[machine_alias_name] = machine_ip
+        if selected_machines:
+            application.get_client_buildinfo(selected_machines)
+
+    @classmethod
+    def on_quit(cls):
+        sys.exit()
+
+
+# Menu 12
+class BrokerBuildInfoMenu(EditMenu):
+    items = create_dynamic_menu_items(config.ViewBrokerHost_All)
+    raw_input_choices = ['ok','a','!','<','n'] + [str(num) for num in range(1,len(items))]
+    @classmethod
+    def update(cls,index):
+        if cls.items[index][1] == '[ ]':
+            cls.items[index][1] = '[*]'
+        else:
+            cls.items[index][1] = '[ ]'
+        Frame.exec_menu('BrokerBuildInfoMenu')
+    @classmethod
+    def on_all(cls):
+        all_true = True
+        for Caption,Value,Func in cls.items[1:]:
+            if Value == '[ ]':
+                all_true = False
+        if all_true:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[ ]'
+        else:
+            for index in range(1,len(cls.items)):
+                cls.items[index][1] = '[*]'
+        Frame.exec_menu('BrokerBuildInfoMenu')
+    @classmethod
+    def on_back(cls):
+        Frame.exec_menu('MainMenu')
+
+    @classmethod
+    def on_ok(cls):
+        selected_machines = {}
+        for item in cls.items:
+            if item[1] == '[*]':
+                machine_alias_name = re.findall(r'\d+\.\s\s*(.*)',item[0])[0]
+                machine_ip = config.ViewBrokerHost_All[machine_alias_name]
+                selected_machines[machine_alias_name] = machine_ip
+        if selected_machines:
+            application.get_broker_buildinfo(selected_machines)
+
+    @classmethod
+    def on_quit(cls):
+        sys.exit()
+
+
 class Frame(object):
     width = 75
-    max_items_in_one_page = 9
+    max_items_in_one_page = 12
     curr_menu = None
     curr_menu_choices =None
     total_items = 0
@@ -597,6 +741,8 @@ class Frame(object):
                 elif choice == 'ok':
                     cls.on_ok()
                 else:
+                    cls.start_index = 1
+                    cls.curr_page = 1
                     func_name = menu.items[int(choice)][2]
                     func = getattr(menu,func_name)
                     if isinstance(menu(),ViewMenu):

@@ -9,8 +9,12 @@ ThinPrintLogDir = {'client':['C:\\Temp',],
                    'agent':['C:\\Temp',]}
 USBArbitratorDir = {'client':['C:\\Windows\\Temp\\vmware-SYSTEM']}
 
+BrokerLogDir = {'broker':['C:\\Program Files\\VMware\\VMware View\\Server\\broker\\logs']}
+
 LogDirs = {'client':
                set(DCTLogDir['client'] + ThinPrintLogDir['client'] + USBArbitratorDir['client']),
            'agent':
-               set(DCTLogDir['agent'] + ThinPrintLogDir['agent'])}
+               set(DCTLogDir['agent'] + ThinPrintLogDir['agent']),
+           'broker':
+               set(BrokerLogDir['broker'])}
 

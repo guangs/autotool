@@ -106,6 +106,19 @@ def uninstall():
         installed_id = get_installed_id()
         subprocess.call('msiexec /norestart /q/x%s REMOVE=ALL' % installed_id,shell=True)
 
+
+def get_build_version():
+    try:
+        output = subprocess.check_output('wmic product get name,version,installdate | find "VMware Horizon Client"',shell=True)
+        if "VMware Horizon Client" in output:
+            version = output.strip().split(' ')[-1]
+            installdate = output.strip().split(' ')[0]
+            return version, installdate
+        else:
+            return 'NA', 'NA'
+    except:
+        return 'NA', 'NA'
+
 if __name__ == '__main__':
     install()
     pass

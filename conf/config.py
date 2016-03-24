@@ -32,7 +32,7 @@ ViewBrokerHost_All = {'win2k8_broker': win2k8_broker,
 
 # Define which nodes you are using, enable/collect logs on those nodes
 ViewClientHost = '127.0.0.1'
-ViewAgentHost = win7x64_agent
+ViewAgentHost = win2012r2_agent
 ViewBrokerHost = '10.117.46.231'
 
 
@@ -40,7 +40,3 @@ ViewBrokerHost = '10.117.46.231'
 
 # 10 min
 # StartCaptureLogTimeout = 10
-
-
-
-

@@ -6895,3 +6895,1731 @@ this message request in PostMessage is:
 this response in PostMessage is 
 {"response":{"status":"OK"}} 
 
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/buildinfo
+Exception:timed out
+retry it again
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/buildinfo
+Exception:timed out
+retry it again
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/buildinfo
+Exception:timed out
+retry it again
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/buildinfo
+Exception:timed out
+retry it again
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/buildinfo
+Exception:timed out
+retry it again
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/buildinfo
+Exception:timed out
+retry it again
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "agent",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "agent",
+    "build_version": "20150521",
+    "build_installdate": "4.8.3002",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "broker",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "broker",
+    "build_version": "NA",
+    "build_installdate": "NA",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+
+
+
+this response in PostMessage is 
+{
+  "response": {
+    "role": "client",
+    "build_version": "20150703",
+    "build_installdate": "3.5.0.37652",
+    "status": "OK"
+  }
+} 
+
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "command": r"net use y: \\sanya.eng.vmware.com\exchange\gshi /user:sanya\gshi vmware;ping 127.0.0.1 -n 10;y:\automation\autotool\dispatch.bat;net use /delete y:;ping 127.0.0.1 -n 10",
+    "interpreter": "bat",
+    "role": "view_client"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/cmd
+Exception:timed out
+retry it again
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "command": r"net use y: \\sanya.eng.vmware.com\exchange\gshi /user:sanya\gshi vmware;ping 127.0.0.1 -n 10;y:\automation\autotool\dispatch.bat;net use /delete y:;ping 127.0.0.1 -n 10",
+    "interpreter": "bat",
+    "role": "view_client"
+  }
+}
+
+Get an exception when trying to connection to host and send GET /rest/cmd
+Exception:[Errno 10061] No connection could be made because the target machine actively refused it
+retry it again
