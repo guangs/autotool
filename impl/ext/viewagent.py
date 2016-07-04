@@ -62,12 +62,13 @@ def install(product='view',branch='view15h2',buildtype='release',buildid='',kind
     if ipversion == 'ipv6':
         selected_components = 'Core,PCoIP,BlastProtocol,RDP,ThinPrint,USB'
     else:
-        selected_components = 'VmVideo,RTAV,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,BlastProtocol,ClientDriveRedirection,PCoIP,UnityTouch,FLASHMMR'
+        #selected_components = 'VmVideo,RTAV,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,BlastProtocol,ClientDriveRedirection,PCoIP,UnityTouch,FLASHMMR'
+        selected_components = 'VmVideo,RTAV,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,ClientDriveRedirection,FLASHMMR'
 
     if rds:
         msi_v_args = '"/qn ADDLOCAL=%s VDM_SERVER_NAME=%s VDM_SERVER_USERNAME=%s VDM_SERVER_PASSWORD=%s VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % (selected_components,brokerIP,broker_username,brokerPassword,IP_Protocol)
     else:
-        msi_v_args = '"/qn ADDLOCAL=%s VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % (selected_components,IP_Protocol)
+        msi_v_args = '"/qn ADDLOCAL=%s VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % (selected_components, IP_Protocol)
 
     cmd_and_args = [
         installer_path,
