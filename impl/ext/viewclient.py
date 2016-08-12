@@ -19,7 +19,7 @@ def download_viewclient_installer(product='viewcrt',branch='crt-15q3',buildtype=
     # XXX need to make sure ''external_version'' definitively identifies the
     # downloaded MSI.
     arch = 'x86_64' if platform.machine().endswith('64') else 'x86'
-    file_pattern = r'VMware-Horizon-Client-%s-\d+\.\d+\.\d+\-\d+\.exe' % arch
+    file_pattern = r'VMware-Horizon-Client-%s-\d+\.\d+\.\d+\-\d+\.exe$' % arch
     return buildweb.download_deliverable_file(
         product,
         file_pattern,
