@@ -22,19 +22,27 @@ class InstallException(Exception):
 def agent_reinstall(branch,buildid,latest,kind,buildtype,ipversion,rds,broker):
     if not os.path.exists('C:\\Temp\\reboot_after_tasks.txt'):
         with open('C:\\Temp\\reboot_after_tasks.txt','w+') as f:
+            f.write('installer.agent_uninstall()\n')
             f.write("installer.agent_install('%s','%s','%s','%s','%s','%s','%s','%s')" % (branch,buildid,latest,kind,buildtype,ipversion,rds,broker))
     else:
         with open('C:\\Temp\\reboot_after_tasks.txt','r') as f:
             pending_tasks = f.read()
-        if 'agent_install' not in pending_tasks:
+        if 'agent_uninstall' not in pending_tasks:
             with open('C:\\Temp\\reboot_after_tasks.txt','a+') as f:
+                f.write('installer.agent_uninstall()\n')
                 f.write("installer.agent_install('%s','%s','%s','%s','%s','%s','%s','%s')" % (branch,buildid,latest,kind,buildtype,ipversion,rds,broker))
         else:
             # there is error in last time, reset pending tasks
             with open('C:\\Temp\\reboot_after_tasks.txt','w+') as f:
+                f.write('installer.agent_uninstall()\n')
                 f.write("installer.agent_install('%s','%s','%s','%s','%s','%s','%s','%s')" % (branch,buildid,latest,kind,buildtype,ipversion,rds,broker))
-    t = threading.Thread(target=agent_uninstall)
+    t = threading.Thread(target=agent_reboot)
     t.start()
+
+
+def agent_reboot():
+    #restart system
+    windows.delay_reboot(10)
 
 
 def agent_uninstall():

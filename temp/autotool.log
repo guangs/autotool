@@ -8623,3 +8623,15 @@ this message request in PostMessage is:
 Get an exception when trying to connection to host and send GET /rest/cmd
 Exception:[Errno 10061] No connection could be made because the target machine actively refused it
 retry it again
+
+
+this message request in PostMessage is: 
+{'Content-type': 'application/json', 'Accept': 'application/json'}
+{
+  "request": {
+    "role": "client",
+    "build_version": "enable",
+    "build_installdate": "enable"
+  }
+}
+

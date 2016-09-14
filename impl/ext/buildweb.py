@@ -113,11 +113,12 @@ def download_deliverable_file(product, target_pattern, local_dnld_dir,
     download_url = os.path.join(tree_url, target_path)
     # Use the same name in buildweb
     local_file_path = os.path.join(local_dnld_dir, os.path.basename(target_path))
-    with open(local_file_path, 'wb') as out:
-        resp = requests.get(download_url, stream=True)
-        for block in resp.iter_content(1024):
-            out.write(block)
-    print "        %s downloaded" % local_file_path
+    if not os.path.exists(local_file_path):
+        with open(local_file_path, 'wb') as out:
+            resp = requests.get(download_url, stream=True)
+            for block in resp.iter_content(1024):
+                out.write(block)
+        print "        %s downloaded" % local_file_path
     return local_file_path
 
 

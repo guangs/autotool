@@ -63,8 +63,8 @@ def install(product='view',branch='view15h2',buildtype='release',buildid='',kind
         selected_components = 'Core,PCoIP,BlastProtocol,RDP,ThinPrint,USB'
     else:
         #selected_components = 'VmVideo,RTAV,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,BlastProtocol,ClientDriveRedirection,PCoIP,UnityTouch,FLASHMMR'
-        selected_components = 'VmVideo,RTAV,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,ClientDriveRedirection,FLASHMMR'
-
+        #selected_components = 'VmVideo,RTAV,ScannerRedirection,SerialPortRedirection,SmartCard,TSMMR,ThinPrint,USB,V4V,VPA,VmwVaudio,RDP,Core,ClientDriveRedirection,FLASHMMR'
+        selected_components = 'ALL'
     if rds:
         msi_v_args = '"/qn ADDLOCAL=%s VDM_SERVER_NAME=%s VDM_SERVER_USERNAME=%s VDM_SERVER_PASSWORD=%s VDM_IP_PROTOCOL_USAGE=%s REBOOT=""ReallySuppress"" "' % (selected_components,brokerIP,broker_username,brokerPassword,IP_Protocol)
     else:

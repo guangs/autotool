@@ -12,6 +12,7 @@ import json
 import re
 import os
 import urllib
+import time
 from impl import *
 import threading
 import impl.ext.viewagent as viewagent
@@ -347,14 +348,21 @@ def start_web_services():
 
 
 def handle_reboot_after_tasks():
+    t1 = threading.Thread(target=collect_build_info_after_started)
+    t1.start()
     if not os.path.exists('C:\\Temp\\reboot_after_tasks.txt'):
         return
     with open('C:\\Temp\\reboot_after_tasks.txt', 'r') as f:
         tasks = f.readlines()
-    os.remove('C:\\Temp\\reboot_after_tasks.txt')
-    for task in tasks:
-        exec('''%s''' % task)
-    collect_build_info_after_started()
+    for i in range(len(tasks)):
+        if len(tasks) == 1:
+            if os.path.exists('C:\\Temp\\reboot_after_tasks.txt'):
+                os.remove('C:\\Temp\\reboot_after_tasks.txt')
+        else:
+            with open('C:\\Temp\\reboot_after_tasks.txt', 'w+') as f:
+                f.writelines(tasks[i+1:])
+        exec('''%s''' % tasks[i])
+        time.sleep(60)
 
 
 def collect_build_info_after_started():
@@ -373,6 +381,15 @@ def collect_build_info_after_started():
         webclient.getBuildInfo('agent')
     except webclient.ServiceException,e:
         print 'getting agent build info failed with description<' + e.value + '>, please retry'
+
+
+def clear_windows_temp_dir():
+    try:
+        for f in os.listdir('C:\\Windows\\Temp'):
+            if os.path.isfile(f):
+                os.remove('C:\\Windows\\Temp')
+    except WindowsError, e:
+        print e.value
 
 
 def create_tempdir():
